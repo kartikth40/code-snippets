@@ -1,5 +1,5 @@
 # Code Snippets
-### Bcz I care about my fellow web developers' coding needs (◔◡◔)
+### Bcz I care about my fellow web developers' precious time (◔◡◔)
 
 
 actually its for my personal needs ✪ ω ✪
