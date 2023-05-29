@@ -3,7 +3,7 @@ Full Stack App
 ```
 
 | Techs    |      cmds     |     desc      |
-|----------|:-------------:|:-------------:|
+|----------|:-------------|:-------------|
 | next.js |  npx create-next-app@latest --typescript | React-based web applications with server-side rendering and static website generation |
 | graphql | npm i graphql | Used for APIs and gives clients the power to ask for exactly what they need and nothing more |
 | react Query | npm i @tanstack/react-query | Data-fetching library for fetching, caching, synchronising, and updating the server state in React apps |
