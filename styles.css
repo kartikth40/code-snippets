@@ -1,4 +1,4 @@
-// make custom variables which can now animate after applying @property to the var
+/* make custom variables which can now animate after applying @property to the var */
 @property --gradient-angle {
   syntax: "<angle>";
   initial-value: 0deg;
