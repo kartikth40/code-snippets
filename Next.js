@@ -1,3 +1,8 @@
+// Points to note - 
+// - no server components inside client conponents
+// - when changing server comp. to client, remember to remove asyncronization from comp declaractions
+
+
 // data rendering options
 export const dynamic = 'auto'  // 'auto' (default) | 'force-dynamic' | 'force-static'
 export const revalidate = 3600 // revalidate data after certain no. of seconds
