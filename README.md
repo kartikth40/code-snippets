@@ -1,14 +1,7 @@
-# Code Snippets  
+# 📚 DSA Snippets Repository
 ### Because I care about my fellow developers' precious time (◔◡◔)
 
-Actually it's for my personal needs ✪ ω ✪  
-But yes, you all are welcome anytime :D  
-
----
-
-# 📚 DSA Snippets Repository  
-Auto-generated file index.
-
+#### Actually it's for my personal needs ✪ ω ✪
 ---
 
 [cheetsheet.md](cheetsheet.md)
