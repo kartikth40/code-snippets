@@ -1,0 +1,34 @@
+name: Generate README
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repo
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Set up Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      # Run your README generator
+      - name: Run generateReadme.js
+        run: node generateReadme.js
+
+      # Commit the updated README
+      - name: Commit changes
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --quiet || git commit -m "chore: update README.md"
+          git push
