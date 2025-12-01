@@ -1,40 +1,29 @@
-# Code Snippets
-### Bcz I care about my fellow developers' precious time (◔◡◔)
+# Code Snippets  
+### Because I care about my fellow developers' precious time (◔◡◔)
 
-
-actually its for my personal needs ✪ ω ✪
-##
-but yes you guys are also welcomed anytime :D
-
-
-# 📚 DSA Snippets Repository
-
-Automatically generated file index.
+Actually it's for my personal needs ✪ ω ✪  
+But yes, you all are welcome anytime :D  
 
 ---
 
+# 📚 DSA Snippets Repository  
+Auto-generated file index.
+
+---
+
+[cheetsheet.md](cheetsheet.md)
+
 - **Algorithms/**
-  - [cycleDetectionDirected.js](Algorithms/cycleDetectionDirected.js)
-  - [dijkstra.js](Algorithms/dijkstra.js)
-  - [kadane.js](Algorithms/kadane.js)
-  - [topoSort.js](Algorithms/topoSort.js)
-- [cheetsheet.md](cheetsheet.md)
+  [cycleDetectionDirected.js](Algorithms/cycleDetectionDirected.js), [dijkstra.js](Algorithms/dijkstra.js), [kadane.js](Algorithms/kadane.js), [topoSort.js](Algorithms/topoSort.js)
 - **Data Structures/**
   - **graph/**
-    - [trie.js](Data%20Structures/graph/trie.js)
-    - [unionFind.js](Data%20Structures/graph/unionFind.js)
+    [trie.js](Data%20Structures/graph/trie.js), [unionFind.js](Data%20Structures/graph/unionFind.js)
   - **heap/**
-    - [minHeap.js](Data%20Structures/heap/minHeap.js)
+    [minHeap.js](Data%20Structures/heap/minHeap.js)
   - **stack/**
-    - [stack.js](Data%20Structures/stack/stack.js)
+    [stack.js](Data%20Structures/stack/stack.js)
 - **DSA patterns/**
-  - [binarySearchOnAnswer.js](DSA%20patterns/binarySearchOnAnswer.js)
-  - [monotonicStack.js](DSA%20patterns/monotonicStack.js)
-  - [prefixSumPattern.js](DSA%20patterns/prefixSumPattern.js)
-  - [twoPointers.js](DSA%20patterns/twoPointers.js)
-- [README.md](README.md)
+  [binarySearchOnAnswer.js](DSA%20patterns/binarySearchOnAnswer.js), [monotonicStack.js](DSA%20patterns/monotonicStack.js), [prefixSumPattern.js](DSA%20patterns/prefixSumPattern.js), [twoPointers.js](DSA%20patterns/twoPointers.js)
 - **templates/**
-  - [bfs.js](templates/bfs.js)
-  - [binarySearch.js](templates/binarySearch.js)
-  - [dfs.js](templates/dfs.js)
+  [bfs.js](templates/bfs.js), [binarySearch.js](templates/binarySearch.js), [dfs.js](templates/dfs.js)
 
