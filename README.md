@@ -7,7 +7,10 @@
 [cheetsheet.md](cheetsheet.md)
 
 - **Algorithms/**
-  [cycleDetectionDirected.js](Algorithms/cycleDetectionDirected.js), [dijkstra.js](Algorithms/dijkstra.js), [kadane.js](Algorithms/kadane.js), [topoSort.js](Algorithms/topoSort.js)
+  - **array/**
+    [kadane.js](Algorithms/array/kadane.js)
+  - **graph/**
+    [bfs.js](Algorithms/graph/bfs.js), [biPartite.js](Algorithms/graph/biPartite.js), [cycleDetectionDirected.js](Algorithms/graph/cycleDetectionDirected.js), [cycleDetectionUndirected.js](Algorithms/graph/cycleDetectionUndirected.js), [dfs.js](Algorithms/graph/dfs.js), [dijkstra.js](Algorithms/graph/dijkstra.js), [topologicalSort.js](Algorithms/graph/topologicalSort.js)
 - **DSA patterns/**
   [binarySearchOnAnswer.js](DSA%20patterns/binarySearchOnAnswer.js), [monotonicStack.js](DSA%20patterns/monotonicStack.js), [prefixSumPattern.js](DSA%20patterns/prefixSumPattern.js), [twoPointers.js](DSA%20patterns/twoPointers.js)
 - **Data Structures/**
