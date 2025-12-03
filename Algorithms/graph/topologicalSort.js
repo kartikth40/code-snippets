@@ -117,3 +117,64 @@ function topoSortDFS(graph) {
 }
 
 console.log('output with DFS:' ,topoSortDFS(graph)) // one possible output: [ 6, 2, 5, 3, 0, 1, 4 ]
+
+
+// -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+
+// Shortest Path in Directed Acyclic Graph (DAG) using Topological Sort
+/*
+  - Can solve for acyclic graphs with negative weights (unlike Dijkstra's)
+  - Time Complexity: O(V + E) where V is vertices and E is edges
+*/
+
+function shortestPathDAG(graph, src) {
+  const nodes = Object.keys(graph)
+  const n = nodes.length
+  const dist = Array(n).fill(Infinity)
+  dist[src] = 0
+
+  let stack = []
+  let visited = new Set()
+
+  for(let node of nodes) {
+    node = parseInt(node)
+    if (!visited.has(node)) {
+      tSort(node, graph, visited, stack)
+    }
+  }
+
+  // Topological Sort using DFS
+  function tSort(node, graph, visited, stack) {
+    visited.add(node)
+    for (const [neighbor, weight] of graph[node]) {
+      if (!visited.has(neighbor)) {
+        tSort(neighbor, graph, visited, stack)
+      }
+    }
+    stack.push(node)
+  }
+
+  while(stack.length > 0) {
+    const node = stack.pop()
+    if (dist[node] !== Infinity) { // perform relaxation only if node is reachable - performance optimization
+      for (const [neighbor, weight] of graph[node]) {
+        if (dist[node] + weight < dist[neighbor]) {
+          dist[neighbor] = dist[node] + weight
+        }
+      }
+    }
+  }
+  return dist
+}
+
+const weightedGraph = {
+  0: [[1, 2], [4, 1]],
+  1: [[2, 3]],
+  2: [[3, 6]],
+  3: [],
+  4: [[5, 4],[2, 2]],
+  5: [[3, 1]]
+}
+
+console.log("Shortest paths from source 0:", shortestPathDAG(weightedGraph, 0))

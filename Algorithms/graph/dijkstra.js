@@ -1,25 +1,43 @@
-const MinHeap = require('../data_structures/minHeap')
+// Dijkstra's Algorithm (Single Source Shortest Path)
 
-// Dijkstra's Algorithm
+// Can solve for cyclic and acyclic graphs with non-negative weights
+// Greedy Algorithm
+// Time Complexity: O((V + E) log V) where V is the number of vertices and E is the number of edges
+
+import { MinPriorityQueue } from '../../Data Structures/heap/PriorityQueue.js'
 function dijkstra(graph, src) {
-  const dist = Array(graph.length).fill(Infinity)
+  const nodes = Object.keys(graph)
+  const n = nodes.length
+  const dist = Array(n).fill(Infinity)
   dist[src] = 0
 
-  const pq = new MinHeap()
-  pq.push([0, src]) // [dist, node]
+  const pq = new MinPriorityQueue((a, b) => a[0] - b[0])
+  pq.enqueue([0, src]) // [dist, node]
 
-  while (pq.h.length) {
-    const [d, node] = pq.pop()
+  while (pq.size() > 0) {
+    const [d, node] = pq.dequeue()
     if (d > dist[node]) continue
 
     for (const [nei, w] of graph[node]) {
       const nd = d + w
       if (nd < dist[nei]) {
         dist[nei] = nd
-        pq.push([nd, nei])
+        pq.enqueue([nd, nei])
       }
     }
   }
 
   return dist
 }
+
+// Example usage:
+const graph = {
+  0: [[1, 4], [2, 1]],
+  1: [[3, 1]],
+  2: [[1, 2], [3, 5]],
+  3: [],
+}
+
+console.log(dijkstra(graph, 0)) // [0, 3, 1, 4]
+
+export default { dijkstra }
