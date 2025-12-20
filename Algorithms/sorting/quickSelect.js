@@ -5,35 +5,67 @@
 // The average time complexity of Quick Select is O(n), making it faster than sorting the entire array when only a single element is needed.
 // The worst-case time complexity is O(n^2), but this can be mitigated with good pivot selection strategies.
 
+// Algorithm Steps (Hoare's Partitioning):
+// 1. Choose a pivot element from the array.
+// 2. Partition the array into two halves: elements less than the pivot and elements greater than the pivot.
+// 3. Determine which partition contains the k-th smallest element.
+// 4. Recursively apply the same process to the relevant partition until the k-th smallest element is found.
 
-var findKthLargest = function (nums, k) {
-  let target = nums.length - k
+function quickSelect(low, high, nums, target) {
+  let i = low
+  let j = high
 
-  function quickSelect(low, high) {
-    let i = low
-    let j = high
+  // Choose middle element as pivot
+  let pivotIndex = Math.floor((i + j) / 2)
+  let pivot = nums[pivotIndex]
 
-    let pivotIndex = Math.floor((i + j) / 2)
-    let pivot = nums[pivotIndex]
-
-    while (i <= j) {
-      while (i <= j && nums[i] < pivot) i++
-      while (i <= j && nums[j] > pivot) j--
-      if (i <= j) {
-        ;[nums[i], nums[j]] = [nums[j], nums[i]]
-        i++
-        j--
-      }
+  // Partition array around pivot
+  while (i <= j) {
+    // Find element from left that should be on right
+    while (i <= j && nums[i] < pivot) i++
+    // Find element from right that should be on left
+    while (i <= j && nums[j] > pivot) j--
+    // Swap elements if needed
+    if (i <= j) {
+      [nums[i], nums[j]] = [nums[j], nums[i]]
+      i++
+      j--
     }
-
-    if (i <= target) {
-      return quickSelect(i, high)
-    }
-    if (j >= target) {
-      return quickSelect(low, j)
-    }
-    return nums[target]
   }
 
-  return quickSelect(0, nums.length - 1)
+  // Recursively search in the partition containing target
+
+  // After partitioning, check which side contains the target index
+  // If target is in the right partition (i <= target)
+  // i points to the start of elements >= pivot
+  
+  // After partitioning:
+  // - Elements at indices [low...j] are <= pivot
+  // - Elements at indices [i...high] are >= pivot
+  // - j < i (they crossed over)
+  
+  // If target is in the right partition
+  // We use `i <= target` because i marks the START of the right partition
+  // If i <= target, then target is somewhere in [i...high]
+  if (i <= target) {
+    return quickSelect(i, high, nums, target)
+  }
+  // If target is in the left partition
+  // j marks the END of the left partition
+  // If j >= target, then target is somewhere in [low...j]
+  if (j >= target) {
+    return quickSelect(low, j, nums, target)
+  }
+  // Target is at correct position
+  return nums[target]
 }
+
+var findKthLargest = function (nums, k) {
+  // Convert k-th largest to index: k-th largest = (n-k)-th smallest (0-indexed)
+  let target = nums.length - k
+  return quickSelect(0, nums.length - 1, nums, target)
+}
+
+// Example usage:
+console.log(findKthLargest([3, 2, 1, 5, 6, 4], 2)) // Output: 5
+console.log(findKthLargest([3, 2, 3, 1, 2, 4, 5, 5, 6], 4)) // Output: 4
