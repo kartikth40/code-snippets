@@ -8,9 +8,11 @@
 
 - **Algorithms/**
   - **array/**
-    [kadane.js](Algorithms/array/kadane.js)
+    [kSum.js](Algorithms/array/kSum.js), [kadane.js](Algorithms/array/kadane.js)
   - **graph/**
     [bfs.js](Algorithms/graph/bfs.js), [biPartite.js](Algorithms/graph/biPartite.js), [cycleDetectionDirected.js](Algorithms/graph/cycleDetectionDirected.js), [cycleDetectionUndirected.js](Algorithms/graph/cycleDetectionUndirected.js), [dfs.js](Algorithms/graph/dfs.js), [dijkstra.js](Algorithms/graph/dijkstra.js), [floydWarshall.js](Algorithms/graph/floydWarshall.js), [topologicalSort.js](Algorithms/graph/topologicalSort.js), [unionFind.js](Algorithms/graph/unionFind.js)
+  - **sorting/**
+    [mergeSort.js](Algorithms/sorting/mergeSort.js), [quickSelect.js](Algorithms/sorting/quickSelect.js)
 - **DSA patterns/**
   [binarySearchOnAnswer.js](DSA%20patterns/binarySearchOnAnswer.js), [monotonicStack.js](DSA%20patterns/monotonicStack.js), [prefixSumPattern.js](DSA%20patterns/prefixSumPattern.js), [twoPointers.js](DSA%20patterns/twoPointers.js)
 - **Data Structures/**
