@@ -4,6 +4,8 @@
 // It is related to the Quick Sort sorting algorithm and works by partitioning the array around a pivot element.
 // The average time complexity of Quick Select is O(n), making it faster than sorting the entire array when only a single element is needed.
 // The worst-case time complexity is O(n^2), but this can be mitigated with good pivot selection strategies.
+// Time Complexity: O(n) on average, O(n^2) in the worst case
+// Space Complexity: O(1) for iterative version, O(log n) for recursive version due to call stack
 
 // Algorithm Steps (Hoare's Partitioning):
 // 1. Choose a pivot element from the array.
