@@ -43,3 +43,13 @@ class MinHeap {
     }
   }
 }
+
+
+// Example usage:
+const minHeap = new MinHeap()
+minHeap.push(5)
+minHeap.push(3)
+minHeap.push(8)
+minHeap.push(1)
+
+console.log(minHeap.pop()) // 1
