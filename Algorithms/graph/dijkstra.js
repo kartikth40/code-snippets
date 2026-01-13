@@ -1,10 +1,11 @@
 // Dijkstra's Algorithm (Single Source Shortest Path)
 
+
 // Can solve for cyclic and acyclic graphs with non-negative weights
 // Greedy Algorithm
 // Time Complexity: O((V + E) log V) where V is the number of vertices and E is the number of edges
 
-import { MinPriorityQueue } from '../../Data Structures/heap/PriorityQueue.js'
+import { MinPriorityQueue } from "../../data-structures/heap/PriorityQueue.js"
 function dijkstra(graph, src) {
   const nodes = Object.keys(graph)
   const n = nodes.length
