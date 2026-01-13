@@ -6,13 +6,13 @@
 
 [cheetsheet.md](cheetsheet.md), [skeleton.md](skeleton.md)
 
-- **Algorithms/**
+- **algorithms/**
   - **array/**
-    [binarySearch.js](Algorithms/array/binarySearch.js), [isPrime.js](Algorithms/array/isPrime.js), [kSum.js](Algorithms/array/kSum.js), [kadane.js](Algorithms/array/kadane.js)
+    [binarySearch.js](algorithms/array/binarySearch.js), [isPrime.js](algorithms/array/isPrime.js), [kSum.js](algorithms/array/kSum.js), [kadane.js](algorithms/array/kadane.js)
   - **graph/**
-    [bfs.js](Algorithms/graph/bfs.js), [biPartite.js](Algorithms/graph/biPartite.js), [cycleDetectionDirected.js](Algorithms/graph/cycleDetectionDirected.js), [cycleDetectionUndirected.js](Algorithms/graph/cycleDetectionUndirected.js), [dfs.js](Algorithms/graph/dfs.js), [dijkstra.js](Algorithms/graph/dijkstra.js), [floydWarshall.js](Algorithms/graph/floydWarshall.js), [topologicalSort.js](Algorithms/graph/topologicalSort.js), [unionFind.js](Algorithms/graph/unionFind.js)
+    [bfs.js](algorithms/graph/bfs.js), [biPartite.js](algorithms/graph/biPartite.js), [cycleDetectionDirected.js](algorithms/graph/cycleDetectionDirected.js), [cycleDetectionUndirected.js](algorithms/graph/cycleDetectionUndirected.js), [dfs.js](algorithms/graph/dfs.js), [dijkstra.js](algorithms/graph/dijkstra.js), [floydWarshall.js](algorithms/graph/floydWarshall.js), [topologicalSort.js](algorithms/graph/topologicalSort.js), [unionFind.js](algorithms/graph/unionFind.js)
   - **sorting/**
-    [mergeSort.js](Algorithms/sorting/mergeSort.js), [quickSelect.js](Algorithms/sorting/quickSelect.js), [quickSort.js](Algorithms/sorting/quickSort.js)
+    [mergeSort.js](algorithms/sorting/mergeSort.js), [quickSelect.js](algorithms/sorting/quickSelect.js), [quickSort.js](algorithms/sorting/quickSort.js)
 - **data-structures/**
   - **graph/**
     [trie.js](data-structures/graph/trie.js)
