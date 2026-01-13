@@ -7,6 +7,7 @@ function sieveOfEratosthenes(n) {
   for (let i = 2; i * i <= n; i++) {
     if (isPrime[i]) {
       // Mark all multiples as not prime
+      // Start from i*i to avoid redundant work
       for (let j = i * i; j <= n; j += i) {
         isPrime[j] = false
       }

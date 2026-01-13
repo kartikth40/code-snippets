@@ -72,3 +72,50 @@ var findKthLargest = function (nums, k) {
 console.log("quick select:")
 console.log(findKthLargest([3, 2, 1, 5, 6, 4], 2)) // Output: 5
 console.log(findKthLargest([3, 2, 3, 1, 2, 4, 5, 5, 6], 4)) // Output: 4
+
+
+
+
+
+
+// Problem: Kth closest points to origin
+// Given an array of points in a 2D plane, find the k closest points to the origin (0, 0).
+
+
+var kClosest = function (points, k) {
+  // We can use quick select to find the k closest points to origin
+  // Distance from origin can be calculated as x^2 + y^2 (no need to take sqrt for comparison)
+  return quickSelect(0, points.length - 1, points, k - 1)
+
+  function quickSelect(low, high, points, target) {
+    let i = low
+    let j = high
+    let pivotIndex = Math.floor((i + j) / 2)
+    let pivotDist = distance(points[pivotIndex])
+    while (i <= j) {
+      while (i <= j && distance(points[i]) < pivotDist) i++
+      while (i <= j && distance(points[j]) > pivotDist) j--
+      if (i <= j) {
+        [points[i], points[j]] = [points[j], points[i]]
+        i++
+        j--
+      }
+    }
+
+    if (i <= target) {
+      return quickSelect(i, high, points, target)
+    }
+    if (j >= target) {
+      return quickSelect(low, j, points, target)
+    }
+    return points.slice(0, target + 1)
+  }
+  function distance(point) {
+    return point[0] * point[0] + point[1] * point[1]
+  }
+}
+
+// Example usage:
+console.log("k closest points to origin:")
+console.log(kClosest([[1, 3], [-2, 2]], 1)) // Output: [[-2,2]]
+console.log(kClosest([[3, 3], [5, -1], [-2, 4]], 2)) // Output: [[3,3],[-2,4]]

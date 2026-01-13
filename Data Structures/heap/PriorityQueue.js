@@ -1,3 +1,23 @@
+// Min-Heap based Priority Queue
+
+// A priority queue is an abstract data type that operates similar to a regular queue or stack data structure,
+// but where each element has a "priority" associated with it. In a min-priority queue, elements with lower
+// priority values are served before elements with higher priority values.
+
+// Time Complexity:
+// - Insertion (enqueue): O(log n)
+// - Removal of minimum element (dequeue): O(log n)
+// - Peek at minimum element: O(1)
+
+// When to use:
+// - When you need to efficiently retrieve and remove the element with the highest priority (lowest value).
+// - When implementing algorithms like Dijkstra's shortest path or Prim's minimum spanning tree.
+// - When managing tasks with varying levels of urgency.
+
+// Algorithm Implementation:
+// The priority queue is implemented using a binary min-heap, which is a complete binary tree
+// where each node is less than or equal to its children.
+
 class MinPriorityQueue {
   constructor(compareFn) {
     this.heap = []

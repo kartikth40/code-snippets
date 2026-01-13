@@ -11,3 +11,5 @@ function binarySearch(arr, target) {
   }
   return -1
 }
+
+// more patterns in DSA patterns/binary-search.js

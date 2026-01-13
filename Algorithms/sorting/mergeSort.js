@@ -75,3 +75,51 @@ function mergeAndCount(leftArray, rightArray, counts) {
 // Example usage:
 console.log(countSmaller([5, 2, 6, 1])) // Output: [2, 1, 1, 0]
 console.log(countSmaller([-1])) // Output: [0]
+
+
+
+
+// Sort List
+// Given the head of a linked list, return the list after sorting it in ascending order.
+
+var sortList = function (head) {
+  if (!head || !head.next) return head
+
+  let slow = head
+  let fast = head
+  let prev = head
+
+  while (fast && fast.next) {
+    prev = slow
+    slow = slow.next
+    fast = fast.next.next
+  }
+  prev.next = null
+
+  let left = sortList(head)
+  let right = sortList(slow)
+
+  return mergeLists(left, right)
+
+  function mergeLists(left, right) {
+    let cur1 = left
+    let cur2 = right
+    let dummy = new ListNode(-1)
+    let cur = dummy
+    while (cur1 && cur2) {
+      if (cur1.val < cur2.val) {
+        cur.next = cur1
+        cur = cur.next
+        cur1 = cur1.next
+      } else {
+        cur.next = cur2
+        cur = cur.next
+        cur2 = cur2.next
+      }
+    }
+
+    if (cur1 || cur2) cur.next = cur1 || cur2
+
+    return dummy.next
+  }
+}
