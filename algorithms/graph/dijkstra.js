@@ -5,6 +5,10 @@
 // Greedy Algorithm
 // Time Complexity: O((V + E) log V) where V is the number of vertices and E is the number of edges
 
+// Greedy choice: always expand the least costly node first
+// Finds the shortest path from source to all other nodes in the graph
+// Can't find shortest paths with constraints on number of edges or negative weights (bellman-ford can)
+
 import { MinPriorityQueue } from "../../data-structures/heap/PriorityQueue.js"
 function dijkstra(graph, src) {
   const nodes = Object.keys(graph)

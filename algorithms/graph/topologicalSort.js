@@ -178,3 +178,43 @@ const weightedGraph = {
 }
 
 console.log("Shortest paths from source 0:", shortestPathDAG(weightedGraph, 0))
+
+
+// -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+// Course Schedule II on LeetCode using DFS-based Topological Sort
+
+var findOrder = function (numCourses, prerequisites) {
+  let res = []
+
+  let preSet = Array.from({ length: numCourses }, (_) => [])
+  for (let [crs, pre] of prerequisites) {
+    preSet[crs].push(pre)
+  }
+
+  let visit = new Set()
+  let cycle = new Set()
+
+  function dfs(crs) {
+    if (cycle.has(crs)) return false
+    if (visit.has(crs)) return true
+
+    cycle.add(crs)
+
+    for (let pre of preSet[crs]) {
+      if (!dfs(pre)) return false
+    }
+
+    cycle.delete(crs)
+    visit.add(crs)
+    res.push(crs)
+    return true
+  }
+
+  for (let c = 0; c < numCourses; c++) {
+    if (!dfs(c)) return []
+  }
+  return res
+}
+
+console.log("Course Schedule II order:", findOrder(4, [[1,0],[2,0],[3,1],[3,2]])) // Output: [0,2,1,3] or [0,1,2,3]

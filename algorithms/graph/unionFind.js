@@ -74,18 +74,20 @@ class UnionFind {
   }
 }
 
+export {UnionFind}
+
 
 // Example usage:
-const uf = new UnionFind();
-uf.union(1, 2);
-uf.union(2, 3);
-uf.union(4, 5);
-uf.union(5, 6);
+// const uf = new UnionFind();
+// uf.union(1, 2);
+// uf.union(2, 3);
+// uf.union(4, 5);
+// uf.union(5, 6);
 
-console.log(uf.connected(1, 3)); // true
-console.log(uf.connected(1, 4)); // false
-uf.union(3, 4);
-console.log(uf.connected(1, 4)); // true
+// console.log(uf.connected(1, 3)); // true
+// console.log(uf.connected(1, 4)); // false
+// uf.union(3, 4);
+// console.log(uf.connected(1, 4)); // true
 
 
 // Questions for practice:
