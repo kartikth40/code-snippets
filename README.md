@@ -10,9 +10,11 @@
   - **array/**
     [binarySearch.js](algorithms/array/binarySearch.js), [isPrime.js](algorithms/array/isPrime.js), [kSum.js](algorithms/array/kSum.js), [kadane.js](algorithms/array/kadane.js)
   - **graph/**
-    [bfs.js](algorithms/graph/bfs.js), [biPartite.js](algorithms/graph/biPartite.js), [cycleDetectionDirected.js](algorithms/graph/cycleDetectionDirected.js), [cycleDetectionUndirected.js](algorithms/graph/cycleDetectionUndirected.js), [dfs.js](algorithms/graph/dfs.js), [dijkstra.js](algorithms/graph/dijkstra.js), [floydWarshall.js](algorithms/graph/floydWarshall.js), [topologicalSort.js](algorithms/graph/topologicalSort.js), [unionFind.js](algorithms/graph/unionFind.js)
+    [bellman-ford.js](algorithms/graph/bellman-ford.js), [bfs.js](algorithms/graph/bfs.js), [biPartite.js](algorithms/graph/biPartite.js), [cycleDetectionDirected.js](algorithms/graph/cycleDetectionDirected.js), [cycleDetectionUndirected.js](algorithms/graph/cycleDetectionUndirected.js), [dfs.js](algorithms/graph/dfs.js), [dijkstra.js](algorithms/graph/dijkstra.js), [floydWarshall.js](algorithms/graph/floydWarshall.js), [kruskals.js](algorithms/graph/kruskals.js), [prims.js](algorithms/graph/prims.js), [topologicalSort.js](algorithms/graph/topologicalSort.js), [unionFind.js](algorithms/graph/unionFind.js)
   - **sorting/**
     [mergeSort.js](algorithms/sorting/mergeSort.js), [quickSelect.js](algorithms/sorting/quickSelect.js), [quickSort.js](algorithms/sorting/quickSort.js)
+  - **string/**
+    [KMP.js](algorithms/string/KMP.js), [Rabin-karp.js](algorithms/string/Rabin-karp.js)
 - **data-structures/**
   - **graph/**
     [trie.js](data-structures/graph/trie.js)
