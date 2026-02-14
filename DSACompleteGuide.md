@@ -38,15 +38,15 @@ function exactlyK(nums, k) {
 }
 
 function atMostK(nums, k) {
-  const map = new Map();
+  const freqMap = new Map();
   let left = 0, count = 0;
   
   for (let right = 0; right < nums.length; right++) {
-    map.set(nums[right], (map.get(nums[right]) || 0) + 1);
+    freqMap.set(nums[right], (freqMap.get(nums[right]) || 0) + 1);
     
-    while (map.size > k) {
-      map.set(nums[left], map.get(nums[left]) - 1);
-      if (map.get(nums[left]) === 0) map.delete(nums[left]);
+    while (freqMap.size > k) {
+      freqMap.set(nums[left], freqMap.get(nums[left]) - 1);
+      if (freqMap.get(nums[left]) === 0) freqMap.delete(nums[left]);
       left++;
     }
     
@@ -157,6 +157,33 @@ for (let len = 2; len <= n; len++) {
 - Diameter of tree
 - House Robber III
 
+**G. Bitmask DP (State Compression)** ⭐
+- Traveling Salesman Problem (TSP)
+- Subset DP with constraints
+- Visiting subsets of items
+
+```javascript
+// Pattern: dp[mask][i] = result when visiting subset 'mask' ending at node i
+// TSP Example: Minimum cost to visit all cities starting from city 0
+const dp = Array(1 << n).fill().map(() => Array(n).fill(Infinity));
+dp[1][0] = 0; // Start from city 0
+
+for (let mask = 1; mask < (1 << n); mask++) {
+  for (let u = 0; u < n; u++) {
+    if (!(mask & (1 << u))) continue; // u not in mask
+    if (dp[mask][u] === Infinity) continue;
+    
+    for (let v = 0; v < n; v++) {
+      if (mask & (1 << v)) continue; // v already visited
+      const newMask = mask | (1 << v);
+      dp[newMask][v] = Math.min(dp[newMask][v], dp[mask][u] + dist[u][v]);
+    }
+  }
+}
+```
+
+**Key:** Time O(2^n * n), Space O(2^n * n). Use when n ≤ 20-25
+
 **Space Optimization Tricks:**
 - 2D → 1D: Only keep previous row
 - Rolling array: Use modulo for index
@@ -188,6 +215,57 @@ for (let len = 2; len <= n; len++) {
 - Use hash table when keys are arbitrary or large range
 
 **Sample Problems:** Two Sum, Subarray Sum Equals K, Group Anagrams, Longest Substring Without Repeating Characters
+
+---
+
+### 3.5. Segment Tree (Advanced Data Structure) ⭐
+
+**What it is:** Binary tree built on array segments for fast range queries and updates
+
+**When to Use:**
+- Range min/max/sum queries with updates
+- Point and range update queries
+- Need O(log n) per operation
+
+```javascript
+// Segment Tree - O(n) build, O(log n) query/update (Sum example)
+class SegmentTree {
+  constructor(arr) {
+    this.n = arr.length;
+    this.tree = new Array(4 * this.n).fill(0);
+    this.build(arr, 0, 0, this.n - 1);
+  }
+  
+  build(arr, node, start, end) {
+    if (start === end) {
+      this.tree[node] = arr[start];
+    } else {
+      const mid = Math.floor((start + end) / 2);
+      this.build(arr, 2 * node + 1, start, mid);
+      this.build(arr, 2 * node + 2, mid + 1, end);
+      this.tree[node] = this.tree[2 * node + 1] + this.tree[2 * node + 2];
+    }
+  }
+  
+  query(node, start, end, l, r) {
+    if (r < start || end < l) return 0;
+    if (l <= start && end <= r) return this.tree[node];
+    
+    const mid = Math.floor((start + end) / 2);
+    return this.query(2 * node + 1, start, mid, l, r) +
+           this.query(2 * node + 2, mid + 1, end, l, r);
+  }
+  
+  rangeQuery(l, r) { return this.query(0, 0, this.n - 1, l, r); }
+}
+
+const seg = new SegmentTree([1, 2, 3, 4, 5]);
+console.log(seg.rangeQuery(1, 3)); // Sum of elements 1-3 = 9
+```
+
+**Time:** Build O(n), Query O(log n), Update O(log n)  
+**Space:** O(n)  
+**Alternatives:** Fenwick Tree (simpler), Sparse Table (O(1) queries, no updates)
 
 ---
 
@@ -677,9 +755,9 @@ function hasCycleUndirected(graph, n) {
 
 **9. [Prim's Algorithm](/algorithms/graph/prims.js) (Minimum Spanning Tree)** ⭐
 
-** 10. [Kosaraju's Algorithm](/algorithms/graph/kosaraju.js) (Strongly Connected Components)** ⭐
+**10. [Kosaraju's Algorithm](/algorithms/graph/kosaraju.js) (Strongly Connected Components)** ⭐
 
-** 11. [Tarjan's Algorithm](/algorithms/graph/tarjan.js) (Strongly Connected Components)** ⭐
+**11. [Tarjan's Algorithm](/algorithms/graph/tarjan.js) (Strongly Connected Components)** ⭐
 
 **When to Use Which Algorithm:** ⭐
 - **Shortest Path (unweighted):** BFS
@@ -698,20 +776,89 @@ function hasCycleUndirected(graph, n) {
 
 **A. [KMP](/algorithms/string/KMP.js) (Pattern Matching)**
 
+**When to use:**
+- Search for a pattern in a string efficiently
+- Avoid re-checking characters after a mismatch
+- Find all occurrences of a pattern
+
 **B. [Rabin karp](/algorithms/string/Rabin-karp.js.js) (Rolling Hash)**
+
+**When to use:**
+- Search for a pattern in a string using hashing
+- Find all occurrences of a pattern
+- Handle multiple pattern searches efficiently
 
 **String Tricks:**
 - Use ASCII for fast frequency: `freq[char.charCodeAt(0) - 'a'.charCodeAt(0)]++`
 - KMP for pattern matching (O(n + m))
-- Rolling hash for substring comparison
+- Rolling hash for substring comparison (O(n + m) average)
+
+**C. [Suffix Trie](/patterns/suffix-trie.js) (Counting Distinct Substrings)**
+
+**When to use:**
+- Count distinct substrings in a string
+- Store and query all suffixes efficiently
+- String processing with substring/pattern queries
+
+**Approaches:**
+```javascript
+// 1. Brute Force: O(n³) time, O(n²) space
+// - Generate all substrings, use Set for uniqueness
+
+// 2. Suffix Trie: O(n²) time, O(n²) space
+// - Insert all suffixes into trie
+// - Each new node = new distinct substring
+// - Count = number of nodes created
+
+// 3. Suffix Array + LCP: O(n log n) time, O(n) space ⭐
+// - Build suffix array (sorted suffixes)
+// - Calculate longest common prefix between adjacent suffixes
+// - distinct_count = Σ(suffix_length - lcp_with_previous)
+```
+
+**Key Insight:** Each node in a suffix trie represents a unique substring. By sorting suffixes and using LCP, we eliminate duplicates efficiently.
+
+**Sample Problems:** Count Distinct Substrings, Find Longest Repeated Substring, Suffix Array Construction
 
 **Time Complexity:**
 - Naive: O(n * m)
 - KMP: O(n + m)
 - Rabin-Karp: O(n + m) average
-- Boyer-Moore: O(n / m) best case
+- Suffix Trie: O(n²)
+- Suffix Array + LCP: O(n log n)
 
 **Sample Problems:** Longest Substring Without Repeating Characters, Group Anagrams, Valid Palindrome II
+
+**D. Manacher's Algorithm (Longest Palindromic Substring)** ⭐
+
+**When to use:**
+- Find longest palindrome in O(n) time
+- More elegant than center expansion approach
+
+```javascript
+// Transform "abc" → "#a#b#c#" to handle both odd/even palindromes
+const transformed = '#' + s.split('').join('#') + '#';
+const p = new Array(transformed.length).fill(0); // radius at each position
+let center = 0, right = 0;
+
+for (let i = 1; i < transformed.length - 1; i++) {
+  const mirror = 2 * center - i;
+  if (i < right) p[i] = Math.min(right - i, p[mirror]);
+  
+  while (i + p[i] + 1 < transformed.length &&
+         transformed[i + p[i] + 1] === transformed[i - p[i] - 1]) {
+    p[i]++;
+  }
+  
+  if (i + p[i] > right) {
+    center = i;
+    right = i + p[i];
+  }
+}
+// Extract result: start = (maxCenterIndex - maxLen) / 2, length = maxLen
+```
+
+**Time:** O(n), **Space:** O(n). Far superior to O(n²) center expansion.
 
 ---
 
@@ -978,6 +1125,37 @@ function nextGreaterElement(nums) {
 }
 ```
 
+**Monotonic Deque Extension** ⭐
+
+**When to Use:**
+- Sliding window min/max queries
+- Stock price span problems
+- Building heights & visibility
+
+```javascript
+// Sliding Window Maximum - O(n) using Monotonic Deque
+function maxSlidingWindow(nums, k) {
+  const deque = []; // Decreasing order of values
+  const result = [];
+  
+  for (let i = 0; i < nums.length; i++) {
+    // Remove indices outside window
+    while (deque.length && deque[0] < i - k + 1) deque.shift();
+    
+    // Remove smaller elements (maintain decreasing)
+    while (deque.length && nums[deque[deque.length - 1]] < nums[i]) deque.pop();
+    
+    deque.push(i);
+    
+    if (i >= k - 1) result.push(nums[deque[0]]);
+  }
+  
+  return result; // [1,3,-1,-3,5,3,6,7], k=3 → [3,3,5,5,6,7]
+}
+```
+
+**Key:** Each element added/removed once. Time O(n), Space O(k). Better than using heap!
+
 ---
 
 ### 12. Greedy
@@ -1134,7 +1312,7 @@ function pow(x, n) {
 
 ---
 
-### 16. [Heap](/data-structures/heap/minHeap.js) / Priority Queue
+### 16. [Heap](/data-structures/heap/minHeap.js) / [Priority Queue](/data-structures/heap/priorityQueue.js)
 
 **What it is:** Complete binary tree with heap property (min-heap or max-heap)
 
