@@ -21,7 +21,7 @@
 
 ### 2️⃣ [System Design](SystemDesign/)
 - **10 Real System Designs** - All optimized for 45-min SDE-2 interviews
-- **Interview-Ready Format** - 400-600 lines, perfect for FAANG/Unicorn/Startup interviews
+- **Interview-Ready Format** - Perfect for FAANG/Unicorn/Startup interviews
 - **India-Specific Designs** (Payment Gateway with UPI/Razorpay, Food Delivery like Swiggy/Zomato)
 - **Component Deep-Dives** (Load Balancers, Caching, DB Sharding, Message Queues, Microservices, Monitoring)
 - **Trade-off Analysis** for scalability decisions
@@ -33,7 +33,7 @@ Payment Gateway, Uber, WhatsApp, Food Delivery, YouTube, Twitter, Instagram, URL
 
 **Quick Links:**
 - 📖 [System Design Guide](SystemDesign/SystemDesignGuide.md) - Complete framework
-- 🏗️ [Design Examples](SystemDesign/designs/) - **SDE-2 optimized** designs with LLD sections
+- 🏗️ [Design Examples](SystemDesign/designs/) - **SDE-2 optimized** designs
 - 🔧 [Components](SystemDesign/components/) - Building blocks explained in depth
 
 ---
@@ -151,7 +151,7 @@ cat InterviewPrep/StudyPlan-8weeks.md
 ```
 tech-interview-master/
 ├── 📘 DSA/
-│   ├── DSACompleteGuide.md          # Comprehensive pattern guide (1580+ lines)
+│   ├── DSACompleteGuide.md          # Comprehensive pattern guide
 │   ├── DSAQuickLookup.md            # Quick reference cheatsheet
 │   ├── patterns/                    # 13 pattern implementations
 │   ├── algorithms/                  # Core algorithms (BFS, DFS, etc.)
@@ -198,36 +198,8 @@ tech-interview-master/
 │   ├── India-Specific.md            # 🇮🇳 Salaries, companies, cities, referrals
 │   └── MockInterviewQuestions.md    # Practice questions
 │
-└── README.md                         # You are here!
+└── README.md                        # You are here!
 ```
-
----
-
-## 📈 Your Interview Prep Checklist
-
-### Phase 1: DSA Mastery (Weeks 1-4)
-- [ ] Read [DSA Complete Guide](DSA/DSACompleteGuide.md)
-- [ ] Memorize [Quick Lookup patterns](DSA/DSAQuickLookup.md)
-- [ ] Solve 80 LeetCode problems (60 Medium, 20 Hard)
-- [ ] Practice all patterns in [patterns/](DSA/patterns/)
-
-### Phase 2: System Design (Weeks 5-6)
-- [ ] Read [System Design Guide](SystemDesign/SystemDesignGuide.md)
-- [ ] Study all [design examples](SystemDesign/designs/)
-- [ ] Learn [components](SystemDesign/components/)
-- [ ] Design 5+ systems from scratch with diagrams
-
-### Phase 3: Behavioral Prep (Week 7)
-- [ ] Read [Behavioral Guide](Behavioral/BehavioralGuide.md)
-- [ ] Write 15-20 [STAR stories](Behavioral/STAR-stories.md)
-- [ ] Study [company-specific](Behavioral/company-specific/) cultures
-- [ ] Practice answers out loud
-
-### Phase 4: Mock Interviews (Week 8)
-- [ ] Complete [8-week study plan](InterviewPrep/StudyPlan-8weeks.md)
-- [ ] Do 10 mock technical interviews
-- [ ] Do 5 mock behavioral interviews
-- [ ] Review [company-specific tips](InterviewPrep/CompanySpecific.md)
 
 ---
 
@@ -313,5 +285,5 @@ This repository contains everything you need to succeed, but remember:
 ---
 
 **Last Updated:** February 2026  
-**Status:** 🚧 In Progress 
+**Status:** 🚧 In Progress  
 **Target:** SDE-1/2 at top tech companies (Global & India)

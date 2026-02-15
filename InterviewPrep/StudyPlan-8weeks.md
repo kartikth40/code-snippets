@@ -4,6 +4,8 @@
 
 This plan prepares you for **SDE-1/SDE-2 interviews at FAANG** (Google, Meta, Amazon, Microsoft, Apple).
 
+> **Important Note❗: You should have already practiced problems related with the patterns in the [DSA Complete Guide](../DSA/DSACompleteGuide.md) before starting this plan. This plan focuses on applying those patterns to real interview questions, mastering system design, and polishing behavioral answers. In reality most candidates spend 4-6 months preparing, but this aggressive 8-week plan is designed for those who want to maximize their chances in a shorter timeframe.**
+
 **Time Commitment:** 20-25 hours/week  
 **Target:** Pass coding + system design + behavioral interviews  
 **Difficulty:** Progressive (starts easier, gets harder)  
@@ -173,6 +175,9 @@ Weekend (2.5h/day = 5h):
 - [ ] Word Search (Medium)
 
 ### System Design (Week 3-4)
+
+> Note: System Design is not required for SDE-1 interviews, but it's good to get started early.
+
 - [ ] Read [System Design Guide](../SystemDesign/SystemDesignGuide.md)
 - [ ] Study [URL Shortener](../SystemDesign/designs/url-shortener.md)
 - [ ] Design Twitter (practice drawing diagrams)
