@@ -57,7 +57,7 @@ function atMostK(nums, k) {
 }
 ```
 
-**Sample Problems:** Subarrays with K Distinct, Longest Substring with At Most K Distinct, Minimum Size Subarray Sum, Longest Repeating Character Replacement
+**Sample Problems:** Subarrays with K Distinct, Count Number of Nice Subarrays, Binary Subarrays With Sum, Number of Substrings Containing All Three Characters, Longest Substring with At Most K Distinct Characters
 
 ---
 
