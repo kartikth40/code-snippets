@@ -1,9 +1,7 @@
 # 🎯 Tech Interview Master
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
-![Last Commit](https://img.shields.io/github/last-commit/kartikth40/tech-interview-master)
 ![Stars](https://img.shields.io/github/stars/kartikth40/tech-interview-master?style=social)
-![Forks](https://img.shields.io/github/forks/kartikth40/tech-interview-master?style=social)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 ![Contributors](https://img.shields.io/github/contributors/kartikth40/tech-interview-master)
 ![Issues](https://img.shields.io/github/issues/kartikth40/tech-interview-master)
