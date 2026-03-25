@@ -205,15 +205,19 @@ function toArray(head) {
   return result
 }
 
-// Examples
-const list1 = buildList([1, 2, 4])
-const list2 = buildList([1, 3, 4])
-console.log(toArray(mergeTwoLists(list1, list2)))  // [1,1,2,3,4,4]
+// Examples (only run when executed directly)
+if (import.meta.url === `file:///${process.argv[1].replace(/\\/g, '/')}`) {
+  const list1 = buildList([1, 2, 4])
+  const list2 = buildList([1, 3, 4])
+  console.log(toArray(mergeTwoLists(list1, list2)))  // [1,1,2,3,4,4]
 
-const list3 = buildList([1, 2, 3, 4, 5])
-console.log(toArray(reverseList(list3)))  // [5,4,3,2,1]
+  const list3 = buildList([1, 2, 3, 4, 5])
+  console.log(toArray(reverseList(list3)))  // [5,4,3,2,1]
 
-console.log(middleNode(buildList([1,2,3,4,5])).val)  // 3
+  console.log(middleNode(buildList([1,2,3,4,5])).val)  // 3
 
-console.log(isPalindrome(buildList([1,2,2,1])))  // true
-console.log(isPalindrome(buildList([1,2,3])))    // false
+  console.log(isPalindrome(buildList([1,2,2,1])))  // true
+  console.log(isPalindrome(buildList([1,2,3])))    // false
+}
+
+export { ListNode, reverseList, hasCycle, detectCycle, middleNode, mergeTwoLists, removeNthFromEnd, isPalindrome, addTwoNumbers, buildList, toArray }

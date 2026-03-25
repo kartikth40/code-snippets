@@ -97,25 +97,28 @@ class MinPriorityQueue {
   }
 }
 
-// Examples
+export { MinPriorityQueue }
 
-// Simple numbers (default comparator)
-const pq1 = new MinPriorityQueue()
-pq1.enqueue(5)
-pq1.enqueue(2)
-pq1.enqueue(8)
-console.log(pq1.dequeue()) // 2
+// Examples (only run when executed directly)
+if (import.meta.url === `file:///${process.argv[1].replace(/\\/g, '/')}`) {
+  // Simple numbers (default comparator)
+  const pq1 = new MinPriorityQueue()
+  pq1.enqueue(5)
+  pq1.enqueue(2)
+  pq1.enqueue(8)
+  console.log(pq1.dequeue()) // 2
 
-// Custom comparator for arrays [distance, node]
-const pq2 = new MinPriorityQueue((a, b) => a[0] - b[0])
-pq2.enqueue([10, 'A'])
-pq2.enqueue([5, 'B'])
-pq2.enqueue([15, 'C'])
-console.log(pq2.dequeue()) // [5, 'B']
+  // Custom comparator for arrays [distance, node]
+  const pq2 = new MinPriorityQueue((a, b) => a[0] - b[0])
+  pq2.enqueue([10, 'A'])
+  pq2.enqueue([5, 'B'])
+  pq2.enqueue([15, 'C'])
+  console.log(pq2.dequeue()) // [5, 'B']
 
-// Custom comparator for objects
-const pq3 = new MinPriorityQueue((a, b) => a.priority - b.priority)
-pq3.enqueue({ name: "Task A", priority: 3 })
-pq3.enqueue({ name: "Task B", priority: 1 })
-pq3.enqueue({ name: "Task C", priority: 2 })
-console.log(pq3.dequeue()) // { name: "Task B", priority: 1 }
+  // Custom comparator for objects
+  const pq3 = new MinPriorityQueue((a, b) => a.priority - b.priority)
+  pq3.enqueue({ name: "Task A", priority: 3 })
+  pq3.enqueue({ name: "Task B", priority: 1 })
+  pq3.enqueue({ name: "Task C", priority: 2 })
+  console.log(pq3.dequeue()) // { name: "Task B", priority: 1 }
+}

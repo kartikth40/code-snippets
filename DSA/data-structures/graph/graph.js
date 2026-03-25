@@ -125,22 +125,26 @@ function computeIndegrees(n, graph) {
   return indegree
 }
 
-// Examples
-const g = new Graph(true) // directed
-g.addEdge(0, 1, 4)
-g.addEdge(0, 2, 1)
-g.addEdge(2, 1, 2)
-g.addEdge(1, 3, 1)
-console.log(g.getNeighbors(0))   // [{node:1,weight:4}, {node:2,weight:1}]
-console.log(g.hasEdge(0, 1))     // true
-console.log(g.hasEdge(1, 0))     // false (directed)
-console.log(g.size)              // 4
+// Examples (only run when executed directly)
+if (import.meta.url === `file:///${process.argv[1].replace(/\\/g, '/')}`) {
+  const g = new Graph(true) // directed
+  g.addEdge(0, 1, 4)
+  g.addEdge(0, 2, 1)
+  g.addEdge(2, 1, 2)
+  g.addEdge(1, 3, 1)
+  console.log(g.getNeighbors(0))   // [{node:1,weight:4}, {node:2,weight:1}]
+  console.log(g.hasEdge(0, 1))     // true
+  console.log(g.hasEdge(1, 0))     // false (directed)
+  console.log(g.size)              // 4
 
-const adj = buildAdjList(4, [[0,1],[1,2],[2,3],[3,0]])
-console.log(adj)  // [[1,3],[0,2],[1,3],[2,0]]
+  const adj = buildAdjList(4, [[0,1],[1,2],[2,3],[3,0]])
+  console.log(adj)  // [[1,3],[0,2],[1,3],[2,0]]
 
-const weighted = buildWeightedAdjList(3, [[0,1,5],[1,2,3],[0,2,10]])
-console.log(weighted)  // [[[1,5],[2,10]], [[0,5],[2,3]], [[1,3],[0,10]]]
+  const weighted = buildWeightedAdjList(3, [[0,1,5],[1,2,3],[0,2,10]])
+  console.log(weighted)  // [[[1,5],[2,10]], [[0,5],[2,3]], [[1,3],[0,10]]]
 
-const matrix = buildAdjMatrix(3, [[0,1,2],[1,2,3],[0,2,7]])
-console.log(matrix)  // [[0,2,7],[2,0,3],[7,3,0]]
+  const matrix = buildAdjMatrix(3, [[0,1,2],[1,2,3],[0,2,7]])
+  console.log(matrix)  // [[0,2,7],[2,0,3],[7,3,0]]
+}
+
+export { Graph, buildAdjList, buildWeightedAdjList, buildAdjMatrix, matrixToAdjList, computeIndegrees }

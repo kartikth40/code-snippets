@@ -83,11 +83,15 @@ class MinHeap {
 }
 
 
-// Example usage:
-const minHeap = new MinHeap()
-minHeap.push(5)
-minHeap.push(3)
-minHeap.push(8)
-minHeap.push(1)
+// Examples (only run when executed directly)
+if (import.meta.url === `file:///${process.argv[1].replace(/\\/g, '/')}`) {
+  const minHeap = new MinHeap()
+  minHeap.push(5)
+  minHeap.push(3)
+  minHeap.push(8)
+  minHeap.push(1)
 
-console.log(minHeap.pop()) // 1
+  console.log(minHeap.pop()) // 1
+}
+
+export { MinHeap }

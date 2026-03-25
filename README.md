@@ -149,11 +149,11 @@ cat InterviewPrep/StudyPlan-8weeks.md
 
 | Category | Topics Covered | Difficulty | Completion |
 |----------|---------------|------------|------------|
-| **DSA** | 19 patterns, 50+ algorithms, 10 data structures | ⭐⭐⭐⭐⭐ | 🚧 In Progress |
-| **System Design** | 10 designs, 6 components, LLD, API patterns, distributed systems | ⭐⭐⭐⭐⭐ | 🚧 In Progress |
-| **Behavioral** | STAR, 7 company guides, 16 Amazon LPs, salary negotiation, offer eval | ⭐⭐⭐⭐ | 🚧 In Progress |
-| **Interview Prep** | 8-week plan, India guide, company tips | ⭐⭐⭐ | 🚧 In Progress |
-| **India Resources** | Salaries, companies, cities, referrals, designs | ⭐⭐⭐⭐ | 🚧 In Progress |
+| **DSA** | 19 patterns, 50+ algorithms, 10 data structures | ⭐⭐⭐⭐⭐ | ✅ Complete |
+| **System Design** | 10 designs, 6 components, LLD, API patterns, distributed systems | ⭐⭐⭐⭐⭐ | ✅ Complete |
+| **Behavioral** | STAR, 7 company guides, 16 Amazon LPs, salary negotiation, offer eval | ⭐⭐⭐⭐ | ✅ Complete |
+| **Interview Prep** | 8-week plan, India guide, company tips | ⭐⭐⭐ | ✅ Complete |
+| **India Resources** | Salaries, companies, cities, referrals, designs | ⭐⭐⭐⭐ | ✅ Complete |
 
 ---
 
@@ -255,18 +255,21 @@ tech-interview-master/
 
 ---
 
-## ⭐ Support
+## ⭐ Support & Contributing
 
 If this repository helps you land your dream job:
 - **Star** ⭐ this repo
 - **Share** with friends preparing for interviews
-- **Contribute** your learnings back to the community
+- **Contribute** — see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines
+- **Report issues** — found a bug or outdated info? [Open an issue](../../issues)
 
 ---
 
 ## 📝 License
 
-This repository is for educational purposes. Feel free to use for personal interview preparation.
+This repository is licensed under the **MIT License** — free to use, modify, and share.
+
+See [LICENSE](LICENSE) for full terms.
 
 ---
 
@@ -315,5 +318,5 @@ This repository contains everything you need to succeed, but remember:
 ---
 
 **Last Updated:** March 2026  
-**Status:** 🚧 In Progress  
+**Status:** ✅ Complete (Volume 1 — SDE-1/SDE-2)  
 **Target:** SDE-1/2 at top tech companies (Global & India)

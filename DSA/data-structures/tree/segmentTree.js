@@ -123,14 +123,18 @@ class MinSegmentTree {
   }
 }
 
-// Examples
-const seg = new SegmentTree([1, 3, 5, 7, 9, 11])
-console.log(seg.query(1, 3))   // 15 (3 + 5 + 7)
-seg.update(2, 10)              // change index 2 from 5 to 10
-console.log(seg.query(1, 3))   // 20 (3 + 10 + 7)
+// Examples (only run when executed directly)
+if (import.meta.url === `file:///${process.argv[1].replace(/\\/g, '/')}`) {
+  const seg = new SegmentTree([1, 3, 5, 7, 9, 11])
+  console.log(seg.query(1, 3))   // 15 (3 + 5 + 7)
+  seg.update(2, 10)              // change index 2 from 5 to 10
+  console.log(seg.query(1, 3))   // 20 (3 + 10 + 7)
 
-const minSeg = new MinSegmentTree([2, 5, 1, 4, 9, 3])
-console.log(minSeg.query(0, 5))  // 1
-console.log(minSeg.query(3, 5))  // 3
-minSeg.update(2, 7)
-console.log(minSeg.query(0, 2))  // 2
+  const minSeg = new MinSegmentTree([2, 5, 1, 4, 9, 3])
+  console.log(minSeg.query(0, 5))  // 1
+  console.log(minSeg.query(3, 5))  // 3
+  minSeg.update(2, 7)
+  console.log(minSeg.query(0, 2))  // 2
+}
+
+export { SegmentTree, MinSegmentTree }

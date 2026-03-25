@@ -1,3 +1,5 @@
+import { MinHeap } from './minHeap.js'
+
 // MaxHeap implementation in JavaScript
 
 // A MaxHeap is a binary tree where the value of each node is greater than
@@ -74,7 +76,7 @@ class MaxHeap {
 class MedianFinder {
   constructor() {
     this.lo = new MaxHeap()  // max-heap: stores smaller half
-    this.hi = new _MinHeap() // min-heap: stores larger half
+    this.hi = new MinHeap()  // min-heap: stores larger half
   }
 
   addNum(num) {
@@ -96,51 +98,25 @@ class MedianFinder {
   }
 }
 
-// MinHeap (inlined to keep file self-contained)
-class _MinHeap {
-  constructor() { this.h = [] }
-  push(val) { this.h.push(val); this.#up(this.h.length - 1) }
-  pop() {
-    if (!this.h.length) return null
-    if (this.h.length === 1) return this.h.pop()
-    const top = this.h[0]; this.h[0] = this.h.pop(); this.#down(0); return top
-  }
-  peek() { return this.h[0] ?? null }
-  size() { return this.h.length }
-  #up(i) {
-    while (i > 0) {
-      const p = (i - 1) >> 1
-      if (this.h[p] <= this.h[i]) break
-      ;[this.h[p], this.h[i]] = [this.h[i], this.h[p]]; i = p
-    }
-  }
-  #down(i) {
-    const n = this.h.length
-    while (true) {
-      let s = i; const l = 2*i+1, r = 2*i+2
-      if (l < n && this.h[l] < this.h[s]) s = l
-      if (r < n && this.h[r] < this.h[s]) s = r
-      if (s === i) break
-      ;[this.h[i], this.h[s]] = [this.h[s], this.h[i]]; i = s
-    }
-  }
+// Examples (only run when executed directly)
+if (import.meta.url === `file:///${process.argv[1].replace(/\\/g, '/')}`) {
+  const maxHeap = new MaxHeap()
+  maxHeap.push(3)
+  maxHeap.push(1)
+  maxHeap.push(5)
+  maxHeap.push(2)
+  console.log(maxHeap.pop())  // 5
+  console.log(maxHeap.pop())  // 3
+  console.log(maxHeap.peek()) // 2
+
+  const mf = new MedianFinder()
+  mf.addNum(1)
+  mf.addNum(2)
+  console.log(mf.findMedian())  // 1.5
+  mf.addNum(3)
+  console.log(mf.findMedian())  // 2
+  mf.addNum(4)
+  console.log(mf.findMedian())  // 2.5
 }
 
-// Examples
-const maxHeap = new MaxHeap()
-maxHeap.push(3)
-maxHeap.push(1)
-maxHeap.push(5)
-maxHeap.push(2)
-console.log(maxHeap.pop())  // 5
-console.log(maxHeap.pop())  // 3
-console.log(maxHeap.peek()) // 2
-
-const mf = new MedianFinder()
-mf.addNum(1)
-mf.addNum(2)
-console.log(mf.findMedian())  // 1.5
-mf.addNum(3)
-console.log(mf.findMedian())  // 2
-mf.addNum(4)
-console.log(mf.findMedian())  // 2.5
+export { MaxHeap, MedianFinder }

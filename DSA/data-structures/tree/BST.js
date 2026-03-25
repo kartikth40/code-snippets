@@ -151,16 +151,20 @@ function sortedArrayToBST(nums) {
   return build(0, nums.length - 1)
 }
 
-// Examples
-const bst = new BST()
-for (const val of [5, 3, 7, 1, 4, 6, 8]) bst.insert(val)
-console.log(bst.inorder())    // [1, 3, 4, 5, 6, 7, 8]
-console.log(bst.search(4))    // true
-console.log(bst.search(9))    // false
+// Examples (only run when executed directly)
+if (import.meta.url === `file:///${process.argv[1].replace(/\\/g, '/')}`) {
+  const bst = new BST()
+  for (const val of [5, 3, 7, 1, 4, 6, 8]) bst.insert(val)
+  console.log(bst.inorder())    // [1, 3, 4, 5, 6, 7, 8]
+  console.log(bst.search(4))    // true
+  console.log(bst.search(9))    // false
 
-bst.delete(3)
-console.log(bst.inorder())    // [1, 4, 5, 6, 7, 8]
+  bst.delete(3)
+  console.log(bst.inorder())    // [1, 4, 5, 6, 7, 8]
 
-const balanced = sortedArrayToBST([1, 2, 3, 4, 5, 6, 7])
-console.log(isValidBST(balanced))  // true
-console.log(kthSmallest(balanced, 3))  // 3
+  const balanced = sortedArrayToBST([1, 2, 3, 4, 5, 6, 7])
+  console.log(isValidBST(balanced))  // true
+  console.log(kthSmallest(balanced, 3))  // 3
+}
+
+export { TreeNode, BST, isValidBST, kthSmallest, lowestCommonAncestor, sortedArrayToBST }

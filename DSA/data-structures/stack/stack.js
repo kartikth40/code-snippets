@@ -73,22 +73,26 @@ class MinStack {
   }
 }
 
-// Examples
-const stack = new Stack()
-stack.push(1)
-stack.push(2)
-stack.push(3)
-console.log(stack.peek())    // 3
-console.log(stack.pop())     // 3
-console.log(stack.size())    // 2
-console.log(stack.isEmpty()) // false
+// Examples (only run when executed directly)
+if (import.meta.url === `file:///${process.argv[1].replace(/\\/g, '/')}`) {
+  const stack = new Stack()
+  stack.push(1)
+  stack.push(2)
+  stack.push(3)
+  console.log(stack.peek())    // 3
+  console.log(stack.pop())     // 3
+  console.log(stack.size())    // 2
+  console.log(stack.isEmpty()) // false
 
-const minStack = new MinStack()
-minStack.push(5)
-minStack.push(2)
-minStack.push(7)
-console.log(minStack.getMin())  // 2
-minStack.pop()
-console.log(minStack.getMin())  // 2
-minStack.pop()
-console.log(minStack.getMin())  // 5
+  const minStack = new MinStack()
+  minStack.push(5)
+  minStack.push(2)
+  minStack.push(7)
+  console.log(minStack.getMin())  // 2
+  minStack.pop()
+  console.log(minStack.getMin())  // 2
+  minStack.pop()
+  console.log(minStack.getMin())  // 5
+}
+
+export { Stack, MinStack }

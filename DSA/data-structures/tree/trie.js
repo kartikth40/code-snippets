@@ -55,15 +55,19 @@ class Trie {
 }
 
 
-// Examples
-const trie = new Trie()
-trie.insert("apple")
-trie.insert("app")
-trie.insert("banana")
+// Examples (only run when executed directly)
+if (import.meta.url === `file:///${process.argv[1].replace(/\\/g, '/')}`) {
+  const trie = new Trie()
+  trie.insert("apple")
+  trie.insert("app")
+  trie.insert("banana")
 
-console.log(trie.search("apple"))      // true
-console.log(trie.search("app"))        // true
-console.log(trie.search("ap"))         // false
-console.log(trie.startsWith("ap"))     // true
-console.log(trie.startsWith("ban"))    // true
-console.log(trie.startsWith("cat"))    // false
+  console.log(trie.search("apple"))      // true
+  console.log(trie.search("app"))        // true
+  console.log(trie.search("ap"))         // false
+  console.log(trie.startsWith("ap"))     // true
+  console.log(trie.startsWith("ban"))    // true
+  console.log(trie.startsWith("cat"))    // false
+}
+
+export { Trie, TrieNode }

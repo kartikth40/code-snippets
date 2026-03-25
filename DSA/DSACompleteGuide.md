@@ -748,7 +748,7 @@ function dijkstra(graph, start, n) {
   
   // Min heap: [distance, node]
   const pq = new MinPriorityQueue(([dist, node]) => dist)
-  const pq.enqueue([0, start]);
+  pq.enqueue([0, start]);
   
   while (pq.length) {
     const [d, u] = pq.dequeue();
