@@ -19,7 +19,7 @@ Calculate annualized RSU:
   ₹40L grant over 4 years = ₹10L/year (at current valuation)
 
 Example comparison:
-                    Offer A (FAANG)    Offer B (Startup)
+                    Offer A (MAANG)    Offer B (Startup)
 Base:               ₹45L              ₹35L
 Bonus (target):     ₹9L (20%)         ₹3.5L (10%)
 RSU/ESOP/year:      ₹12L              ₹5L (discounted 80%)

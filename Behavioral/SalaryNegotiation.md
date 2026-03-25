@@ -16,14 +16,14 @@ Most candidates leave money on the table by not negotiating. Studies show:
 ### Research Market Rates
 
 **Sources (India):**
-- [Levels.fyi](https://levels.fyi) — FAANG India compensation data
+- [Levels.fyi](https://levels.fyi) — MAANG India compensation data
 - [Glassdoor](https://glassdoor.co.in) — Salary ranges by company/role
 - [LinkedIn Salary](https://linkedin.com/salary) — Role-based data
 - [AmbitionBox](https://ambitionbox.com) — India-specific, startup data
 - [Blind](https://teamblind.com) — Anonymous peer data
 
 **Sources (Global):**
-- Levels.fyi — Most accurate for FAANG
+- Levels.fyi — Most accurate for MAANG
 - Glassdoor, LinkedIn Salary
 - Peer conversations (most accurate)
 
@@ -173,7 +173,7 @@ Use this time to:
 
 ## 🧮 Evaluating RSUs/ESOPs
 
-### RSU Vesting Schedule (FAANG)
+### RSU Vesting Schedule (MAANG)
 
 ```
 Typical 4-year vesting with 1-year cliff:

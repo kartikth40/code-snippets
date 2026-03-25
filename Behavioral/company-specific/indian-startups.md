@@ -2,9 +2,9 @@
 
 ## 🚀 Overview
 
-Indian startups have distinct cultures compared to FAANG companies. This guide covers behavioral expectations for top Indian unicorns and high-growth startups.
+Indian startups have distinct cultures compared to MAANG companies. This guide covers behavioral expectations for top Indian unicorns and high-growth startups.
 
-**Key Differences from FAANG:**
+**Key Differences from MAANG:**
 - ⚡ **Move faster** - Ship weekly vs monthly
 - 🔥 **Higher pressure** - Hyper-growth mode
 - 💰 **More ownership** - Wear multiple hats
@@ -533,7 +533,7 @@ Learning: Perfect is enemy of done (when time-constrained)
 ---
 
 #### **2. Scrappiness** (Do More with Less)
-Zepto is young, doesn't have FAANG budgets. Resourcefulness matters.
+Zepto is young, doesn't have MAANG budgets. Resourcefulness matters.
 
 **Example Question:**
 **"Describe building something with limited resources"**
@@ -983,4 +983,4 @@ Startups fail often. Show you can bounce back:
 **Good luck with Indian startup interviews! 🚀**
 
 For general India interview tips, see: [india-specific.md](india-specific.md)  
-For FAANG in India, see: [India-Specific.md](../../InterviewPrep/India-Specific.md)
+For MAANG in India, see: [India-Specific.md](../../InterviewPrep/India-Specific.md)

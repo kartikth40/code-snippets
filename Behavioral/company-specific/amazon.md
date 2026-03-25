@@ -4,7 +4,7 @@
 
 **Format:**
 - 5-7 rounds (1 phone screen + 4-6 onsite/virtual + 1 "Bar Raiser")
-- **Behavioral**: 40-50% of total interview (HIGHEST among FAANG)
+- **Behavioral**: 40-50% of total interview (HIGHEST among MAANG)
 - **Technical**: 50-60%
 - **Duration**: 60 min per round
 
@@ -531,7 +531,7 @@ Prepare 12-15 stories that each map to multiple LPs:
 **Remember:**
 - Bar Raiser interview is hardest - different LP tested
 - Each interviewer assigned specific LPs before loop
-- 40-50% of interview is behavioral (highest of FAANG)
+- 40-50% of interview is behavioral (highest of MAANG)
 - LP language is critical - speak Amazon's language
 
 **Next Steps:**

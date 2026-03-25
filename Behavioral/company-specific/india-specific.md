@@ -2,7 +2,7 @@
 
 ## 🇮🇳 Overview
 
-Interviewing in India has unique characteristics whether you're targeting FAANG offices (Google Bangalore, Microsoft Hyderabad) or unicorn startups (Flipkart, Razorpay, CRED, Zepto). This guide helps you navigate the Indian tech interview landscape.
+Interviewing in India has unique characteristics whether you're targeting MAANG offices (Google Bangalore, Microsoft Hyderabad) or unicorn startups (Flipkart, Razorpay, CRED, Zepto). This guide helps you navigate the Indian tech interview landscape.
 
 **Key Differences from US Interviews:**
 - 🌏 **Time zone challenges** - Collaborating with global teams
@@ -13,7 +13,7 @@ Interviewing in India has unique characteristics whether you're targeting FAANG 
 
 ---
 
-## 🏢 FAANG Offices in India
+## 🏢 MAANG Offices in India
 
 ### **Google India**
 **Locations:** Bangalore, Hyderabad, Gurgaon, Mumbai  
@@ -470,7 +470,7 @@ AND save 15% on data transfer costs."
 
 ## 💰 Salary Expectations in India (2026)
 
-### **FAANG Offices (Google, Microsoft, Meta, Amazon, Apple)**
+### **MAANG Offices (Google, Microsoft, Meta, Amazon, Apple)**
 
 | Level | Base (₹ LPA) | Stocks (₹ LPA) | Total (₹ LPA) | USD Equivalent |
 |-------|-------------|---------------|--------------|----------------|
@@ -527,15 +527,15 @@ in the compensation?"
 - Remote work flexibility
 
 **4. Understand Equity:**
-- **RSUs (FAANG):** Liquid, vest over 4 years, taxed as income
+- **RSUs (MAANG):** Liquid, vest over 4 years, taxed as income
 - **ESOPs (Startups):** Illiquid until IPO/acquisition, choose carefully
 
 **5. Consider Total Compensation:**
 ```
-Offer A: ₹40L base + ₹10L RSUs = ₹50L (FAANG)
+Offer A: ₹40L base + ₹10L RSUs = ₹50L (MAANG)
 Offer B: ₹35L base + ₹15L ESOPs = ₹50L (Startup)
 
-FAANG is safer (RSUs are liquid)
+MAANG is safer (RSUs are liquid)
 Startup has upside (if company does well)
 ```
 
@@ -571,7 +571,7 @@ Startup has upside (if company does well)
 - ❌ Hot summers (40°C+)
 - ❌ Less cosmopolitan culture
 
-**Best for:** FAANG employees, cost-conscious, stable careers
+**Best for:** MAANG employees, cost-conscious, stable careers
 
 ---
 
@@ -756,7 +756,7 @@ suggest solutions: better estimation, automation, or hiring."
 ### **India Context:**
 - Most companies shifted to hybrid (3 days office + 2 days remote)
 - Some startups fully remote (Razorpay, GitLab)
-- FAANG requires office presence (Google 3 days/week minimum)
+- MAANG requires office presence (Google 3 days/week minimum)
 
 ### **Q: "How do you stay productive working remotely?"**
 
@@ -814,7 +814,7 @@ Some interviewers (especially startups) may switch to Hindi to test comfort.
 ## 🚫 Red Flags to Avoid
 
 ### **1. Criticizing Indian Work Culture**
-❌ "I want to join FAANG because Indian startups have poor work-life balance"
+❌ "I want to join MAANG because Indian startups have poor work-life balance"
 ✅ "I'm excited about Google's impact on emerging markets"
 
 ### **2. Only Motivated by Money**
@@ -836,7 +836,7 @@ You: "Same as US users"
 ## 📚 Additional Resources
 
 ### **India-Specific Salary/Company Data:**
-- **levels.fyi/India** - Salary ranges for FAANG in India
+- **levels.fyi/India** - Salary ranges for MAANG in India
 - **AmbitionBox** - Indian company reviews
 - **Glassdoor India** - Salary insights
 - **AngelList India** - Startup jobs

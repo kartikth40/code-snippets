@@ -2,7 +2,7 @@
 
 ## 🎯 Overview
 
-This plan prepares you for **SDE-1/SDE-2 interviews at FAANG** (Google, Meta, Amazon, Microsoft, Apple).
+This plan prepares you for **SDE-1/SDE-2 interviews at MAANG** (Google, Meta, Amazon, Microsoft, Apple).
 
 > **Important Note❗: You should have already practiced problems related with the patterns in the [DSA Complete Guide](../DSA/DSACompleteGuide.md) before starting this plan. This plan focuses on applying those patterns to real interview questions, mastering system design, and polishing behavioral answers. In reality most candidates spend 4-6 months preparing, but this aggressive 8-week plan is designed for those who want to maximize their chances in a shorter timeframe.**
 
@@ -464,7 +464,7 @@ Choose top 2 companies, solve their tagged problems:
 - You'll have 15-20 polished STAR stories
 - You'll complete 10+ mock interviews
 
-**That's MORE than enough to pass SDE-1/SDE-2 interviews at FAANG.**
+**That's MORE than enough to pass SDE-1/SDE-2 interviews at MAANG.**
 
 **Remember:**
 - **Consistency > Intensity** - 3 hours/day for 8 weeks beats 24 hours once

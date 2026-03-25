@@ -507,7 +507,7 @@ Amazon unique: They WILL ask which LP your design shows
 
 **Where to Find:**
 1. **Pramp** (free, peer-to-peer)
-2. **Interviewing.io** (free + paid with FAANG interviewers)
+2. **Interviewing.io** (free + paid with MAANG interviewers)
 3. **LeetCode** (mock assessments)
 4. **Friends/colleagues** (reciprocal practice)
 

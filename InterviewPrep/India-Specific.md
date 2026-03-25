@@ -2,10 +2,10 @@
 
 ## 🇮🇳 Overview
 
-This guide covers everything unique to interviewing for tech roles in India, whether you're targeting FAANG offices (Google Bangalore, Microsoft Hyderabad) or high-growth startups (Flipkart, Razorpay, CRED).
+This guide covers everything unique to interviewing for tech roles in India, whether you're targeting MAANG offices (Google Bangalore, Microsoft Hyderabad) or high-growth startups (Flipkart, Razorpay, CRED).
 
 **Quick Stats (2026):**
-- 🏢 **FAANG Engineers in India:** 25,000+
+- 🏢 **MAANG Engineers in India:** 25,000+
 - 🚀 **Unicorn Startups:** 100+ (valued at $1M+)
 - 💰 **Tech Jobs Created (2025):** 500,000+
 - 📍 **Top Tech Hubs:** Bangalore, Hyderabad, Pune, Gurgaon, Mumbai
@@ -14,7 +14,7 @@ This guide covers everything unique to interviewing for tech roles in India, whe
 
 ## 💰 Salary Ranges (2026 Data)
 
-### **FAANG in India (Google, Meta, Amazon, Microsoft, Apple)**
+### **MAANG in India (Google, Meta, Amazon, Microsoft, Apple)**
 
 #### **SDE-1 (0-2 years experience)**
 | Component | Bangalore | Hyderabad | Gurgaon | Pune |
@@ -82,7 +82,7 @@ This guide covers everything unique to interviewing for tech roles in India, whe
 |-------|-------------|---------------|-------|-------|
 | **SDE-1** | 28-40 | 8-20 | 36-60 | CRED pays highest |
 | **SDE-2** | 45-70 | 20-50 | 65-120 | High upside if IPO |
-| **SDE-3** | 70-110 | 40-80 | 110-190 | Competitive with FAANG |
+| **SDE-3** | 70-110 | 40-80 | 110-190 | Competitive with MAANG |
 
 **Notes:**
 - **CRED** pays 20-30% above market (very selective hiring)
@@ -112,7 +112,7 @@ This guide covers everything unique to interviewing for tech roles in India, whe
 
 | Experience | Salary (₹ LPA) | Comparison to Product |
 |------------|----------------|----------------------|
-| **Fresher** | 3.5-6 | 5-7x lower than FAANG |
+| **Fresher** | 3.5-6 | 5-7x lower than MAANG |
 | **2-3 years** | 6-12 | 4-6x lower |
 | **5+ years** | 12-20 | 4-5x lower |
 
@@ -125,7 +125,7 @@ This guide covers everything unique to interviewing for tech roles in India, whe
 
 ## 🏢 Top Companies in India (By Category)
 
-### **Category 1: FAANG (Global Tech Giants)**
+### **Category 1: MAANG (Global Tech Giants)**
 
 #### **1. Google India** 🔍
 **Locations:** Bangalore (largest), Hyderabad, Gurgaon, Mumbai  
@@ -172,7 +172,7 @@ This guide covers everything unique to interviewing for tech roles in India, whe
 
 **Why Join:**
 - Most stable (layoffs rare)
-- Best work-life balance among FAANG
+- Best work-life balance among MAANG
 - Strong research culture (publish papers)
 - Good for long-term careers
 
@@ -283,7 +283,7 @@ This guide covers everything unique to interviewing for tech roles in India, whe
 - DSA: Heavy on DP, graphs, trees
 - Behavioral: Customer obsession, frugality
 
-**Compensation:** Competitive with FAANG (base + RSUs)  
+**Compensation:** Competitive with MAANG (base + RSUs)  
 **Work Culture:** Fast-paced, ownership-driven
 
 ---
@@ -536,7 +536,7 @@ This guide covers everything unique to interviewing for tech roles in India, whe
 - **Gachibowli:** Tech parks, growing area
 - **Madhapur:** Near HITEC City, good connectivity
 
-**Best for:** FAANG employees seeking stability, work-life balance, lower costs
+**Best for:** MAANG employees seeking stability, work-life balance, lower costs
 
 **Salary Adjustment:** Most companies pay 5-10% less than Bangalore, but lower cost of living offsets it.
 
@@ -585,7 +585,7 @@ This guide covers everything unique to interviewing for tech roles in India, whe
 
 **Companies:**
 - Persistent Systems, Thoughtworks, Zensar, Accenture
-- Growing: Some startups, FAANG presence small
+- Growing: Some startups, MAANG presence small
 
 **Downsides:**
 - ❌ **Fewer big tech companies**
@@ -932,7 +932,7 @@ With competing offer: ₹40L → ₹48L (20% increase!)
 ### **Rule 2: Research Salary Ranges**
 
 **Resources for India:**
-- **levels.fyi/India** - Most accurate FAANG data
+- **levels.fyi/India** - Most accurate MAANG data
 - **Glassdoor India** - Good for startups
 - **AmbitionBox** - Indian company reviews + salaries
 - **Blind India** - Anonymous discussions (use with skepticism)

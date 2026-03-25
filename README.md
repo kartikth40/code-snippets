@@ -1,9 +1,15 @@
 # 🎯 Tech Interview Master
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
-![Last Commit](https://img.shields.io/github/last-commit/YOUR_USERNAME/tech-interview-master)
+![Last Commit](https://img.shields.io/github/last-commit/kartikth40/tech-interview-master)
 ![Stars](https://img.shields.io/github/stars/kartikth40/tech-interview-master?style=social)
+![Forks](https://img.shields.io/github/forks/kartikth40/tech-interview-master?style=social)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+![Contributors](https://img.shields.io/github/contributors/kartikth40/tech-interview-master)
+![Issues](https://img.shields.io/github/issues/kartikth40/tech-interview-master)
+![JavaScript](https://img.shields.io/badge/Language-JavaScript-yellow.svg)
+![Target](https://img.shields.io/badge/Target-SDE--1%20%2F%20SDE--2-blue.svg)
+![Companies](https://img.shields.io/badge/Companies-MAANG%20%2B%20Indian%20Unicorns-orange.svg)
 
 > Your complete guide to cracking SDE-1/2 interviews at top tech companies (Google, Meta, Amazon, Microsoft, Apple)
 
@@ -28,7 +34,7 @@
 
 ### 2️⃣ [System Design](SystemDesign/)
 - **10 Real System Designs** - All optimized for 45-min SDE-2 interviews
-- **Interview-Ready Format** - Perfect for FAANG/Unicorn/Startup interviews
+- **Interview-Ready Format** - Perfect for MAANG/Unicorn/Startup interviews
 - **India-Specific Designs** (Payment Gateway with UPI/Razorpay, Food Delivery like Swiggy/Zomato)
 - **Component Deep-Dives** (Load Balancers, Caching, DB Sharding, Message Queues, Microservices, Monitoring)
 - **Low-Level Design (LLD)** - SOLID principles, design patterns, class diagrams, common LLD problems
@@ -54,7 +60,7 @@ Payment Gateway, Uber, WhatsApp, Food Delivery, YouTube, Twitter, Instagram, URL
 - **20+ Story Templates** covering all scenarios
 - **7 Company Guides** (Google, Meta, Amazon, Microsoft, Apple, India, Indian Startups)
 - **Amazon's 16 Leadership Principles** - all updated with stories and examples
-- **India-Specific Behavioral Prep** covering FAANG India offices and unicorn startups
+- **India-Specific Behavioral Prep** covering MAANG India offices and unicorn startups
 - **Mock Practice Framework** with peer and self-practice protocols
 - **Salary Negotiation Guide** - scripts, India benchmarks, RSU/ESOP evaluation
 - **Questions to Ask Interviewers** - 50+ questions by category and company
@@ -73,28 +79,28 @@ Payment Gateway, Uber, WhatsApp, Food Delivery, YouTube, Twitter, Instagram, URL
 
 ### 4️⃣ [Interview Prep](InterviewPrep/)
 - **8-Week Study Plan** with daily goals and milestones
-- **Company-Specific Tips** for FAANG interviews
+- **Company-Specific Tips** for MAANG interviews
 - **India-Specific Guide** with salaries, companies, office locations, referral strategies
 - **Mock Interview Questions** with detailed solutions
 - **Progress Tracking** templates
 
 **Quick Links:**
 - 📅 [8-Week Study Plan](InterviewPrep/StudyPlan-8weeks.md) - Structured learning path
-- 🎯 [Company-Specific Tips](InterviewPrep/CompanySpecific.md) - FAANG focus areas
+- 🎯 [Company-Specific Tips](InterviewPrep/CompanySpecific.md) - MAANG focus areas
 - 🇮🇳 [India-Specific Guide](InterviewPrep/India-Specific.md) - Salaries, companies, cities, referrals
 - 🎤 [Mock Questions](InterviewPrep/MockInterviewQuestions.md) - Practice interviews
 
 ---
 
 ### 5️⃣ India-Specific Resources 🇮🇳
-- **Comprehensive Salary Data** for FAANG India and unicorn startups
+- **Comprehensive Salary Data** for MAANG India and unicorn startups
 - **18+ Top Companies** including Flipkart, Razorpay, CRED, Swiggy, Zomato
 - **Office Locations Guide** (Bangalore, Hyderabad, Gurgaon, Pune, Mumbai)
 - **Referral Strategies** with templates and success rates
 - **India System Designs** (Payment Gateway with UPI, Food Delivery platform)
 
 **Quick Links:**
-- 💼 [India Behavioral Guide](Behavioral/company-specific/india-specific.md) - FAANG India offices & culture
+- 💼 [India Behavioral Guide](Behavioral/company-specific/india-specific.md) - MAANG India offices & culture
 - 🚀 [Indian Startups Guide](Behavioral/company-specific/indian-startups.md) - Flipkart, Razorpay, CRED, Zepto, Swiggy, Zomato
 - 📊 [India Interview Prep](InterviewPrep/India-Specific.md) - Complete India guide
 - 💳 [Payment Gateway Design](SystemDesign/designs/payment-gateway.md) - UPI, Razorpay-style system
@@ -223,12 +229,12 @@ tech-interview-master/
 │       ├── amazon.md                # 16 Leadership Principles
 │       ├── microsoft.md             # Growth mindset & collaboration
 │       ├── apple.md                 # Attention to detail & innovation
-│       ├── india-specific.md        # 🇮🇳 FAANG India offices & culture
+│       ├── india-specific.md        # 🇮🇳 MAANG India offices & culture
 │       └── indian-startups.md       # 🇮🇳 Flipkart, Razorpay, CRED, Swiggy, Zomato
 │
 ├── 🎯 InterviewPrep/
 │   ├── StudyPlan-8weeks.md          # Day-by-day study plan
-│   ├── CompanySpecific.md           # FAANG focus areas
+│   ├── CompanySpecific.md           # MAANG focus areas
 │   ├── India-Specific.md            # 🇮🇳 Salaries, companies, cities, referrals
 │   └── MockInterviewQuestions.md    # Practice questions
 │
@@ -295,7 +301,7 @@ This repository contains everything you need to succeed, but remember:
 
 ## 💰 India Salary Ranges (2026)
 
-### FAANG India Offices
+### MAANG India Offices
 
 | Company | SDE-1 (0-2 yrs) | SDE-2 (2-5 yrs) | Office Locations |
 |---------|----------------|----------------|------------------|

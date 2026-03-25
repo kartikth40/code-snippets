@@ -1,4 +1,4 @@
-# Company-Specific Interview Tips (FAANG)
+# Company-Specific Interview Tips (MAANG)
 
 ## 🎯 Overview
 
@@ -250,7 +250,7 @@ Each top tech company has unique interview styles, focus areas, and cultures. Th
 - ✅ **Trees obsession** - Expect 2-3 tree problems
 - ✅ **Recursive thinking** - They love recursion
 - ✅ **Follow-up questions** - "Now solve it iteratively"
-- ✅ **Nice interviewers** - Less pressure than FAANG peers
+- ✅ **Nice interviewers** - Less pressure than MAANG peers
 - ✅ **OOP design** - Similar to Amazon
 
 ### Sample Questions (Microsoft-Style)
@@ -314,7 +314,7 @@ Each top tech company has unique interview styles, focus areas, and cultures. Th
 - ✅ **Design patterns** - OOP, MVC, Singleton, Observer
 - ✅ **Product thinking** - "How would you improve [Apple Product]?"
 - ✅ **Attention to detail** - Code quality matters
-- ✅ **Secretive** - Less info available than other FAANG
+- ✅ **Secretive** - Less info available than other MAANG
 
 ### Sample Questions (Apple-Style)
 - LeetCode 1: Two Sum
@@ -360,7 +360,7 @@ Each top tech company has unique interview styles, focus areas, and cultures. Th
 
 ---
 
-## 📊 FAANG Comparison Matrix
+## 📊 MAANG Comparison Matrix
 
 | Aspect | Google | Meta | Amazon | Microsoft | Apple |
 |--------|--------|------|--------|-----------|-------|
@@ -403,7 +403,7 @@ Use LeetCode's company filter (requires premium):
 
 ---
 
-## 💡 General FAANG Tips
+## 💡 General MAANG Tips
 
 ### All Companies Value:
 ✅ **Communication** - Think out loud  

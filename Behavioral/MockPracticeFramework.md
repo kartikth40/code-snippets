@@ -259,7 +259,7 @@ After 2-3 weeks of self-practice and peer practice.
 
 1. **Pramp** (pramp.com) - Free peer-to-peer
 2. **Interviewing.io** - Anonymous tech interviews
-3. **Exponent** - $99/month (FAANG-specific practice)
+3. **Exponent** - $99/month (MAANG-specific practice)
 4. **Pathrise** - Career coaching + mocks
 5. **Hire a Coach** - Fiverr, Wonsulting ($50-200/session)
 

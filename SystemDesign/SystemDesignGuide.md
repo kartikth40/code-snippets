@@ -350,7 +350,7 @@ For each component, think:
 └── Reads: CDN → cache → read replicas → denormalized views
 ```
 
-This shows interviewers you think about scalability proactively, not reactively. Practice this for every design you study — it builds the intuition FAANG looks for.
+This shows interviewers you think about scalability proactively, not reactively. Practice this for every design you study — it builds the intuition MAANG looks for.
 
 **Key questions to ask at each scale jump:**
 - Where's the bottleneck now?
