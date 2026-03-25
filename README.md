@@ -1,4 +1,10 @@
 # 🎯 Tech Interview Master
+
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Last Commit](https://img.shields.io/github/last-commit/YOUR_USERNAME/tech-interview-master)
+![Stars](https://img.shields.io/github/stars/kartikth40/tech-interview-master?style=social)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+
 > Your complete guide to cracking SDE-1/2 interviews at top tech companies (Google, Meta, Amazon, Microsoft, Apple)
 
 ### Because preparation = confidence = success ✨
