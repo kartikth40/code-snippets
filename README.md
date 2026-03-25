@@ -153,7 +153,7 @@ tech-interview-master/
 ├── 📘 DSA/
 │   ├── DSACompleteGuide.md          # Comprehensive pattern guide
 │   ├── DSAQuickLookup.md            # Quick reference cheatsheet
-│   ├── patterns/                    # 13 pattern implementations
+│   ├── patterns/                    # DSA pattern implementations
 │   ├── algorithms/                  # Core algorithms (BFS, DFS, etc.)
 │   └── data-structures/             # DS implementations (Heap, Trie, etc.)
 │

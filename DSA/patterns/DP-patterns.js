@@ -21,72 +21,72 @@
 // Given an array of non-negative integers nums, where each element represents the maximum jump length at that position,
 // return the minimum number of jumps to reach the last index.
 
- // Greedy Optimal - O(n)
-var jump = function(nums) {
-    let n = nums.length
-    let far = 0
-    let end = 0
-    let smallest = 0
+// Greedy Optimal - O(n)
+var jump = function (nums) {
+  let n = nums.length
+  let far = 0
+  let end = 0
+  let smallest = 0
 
-    for(let i = 0; i < n-1; i++) {
-        const curJump = nums[i]
-        far = Math.max(far, curJump + i)
-        if(i === end) {
-            smallest++
-            end = far
-        }
+  for (let i = 0; i < n - 1; i++) {
+    const curJump = nums[i]
+    far = Math.max(far, curJump + i)
+    if (i === end) {
+      smallest++
+      end = far
     }
+  }
 
-    return smallest
-};
+  return smallest
+}
 
 // Top-Down DP (Memoization) - O(n^2) worst
-var jump = function(nums) {
-    const n = nums.length;
-    const memo = new Array(n).fill(-1);
-    
-    function dfs(i) {
-        // Base case: reached the end
-        if (i >= n - 1) return 0;
-        
-        // Return cached result
-        if (memo[i] !== -1) return memo[i];
-        
-        let minJumps = Infinity;
-        const maxJump = nums[i];
-        
-        // Try all possible jumps from current position
-        for (let jump = 1; jump <= maxJump; jump++) {
-            if (i + jump < n) {
-                minJumps = Math.min(minJumps, 1 + dfs(i + jump));
-            }
-        }
-        
-        memo[i] = minJumps;
-        return minJumps;
+var jump = function (nums) {
+  const n = nums.length
+  const memo = new Array(n).fill(-1)
+
+  function dfs(i) {
+    // Base case: reached the end
+    if (i >= n - 1) return 0
+
+    // Return cached result
+    if (memo[i] !== -1) return memo[i]
+
+    let minJumps = Infinity
+    const maxJump = nums[i]
+
+    // Try all possible jumps from current position
+    for (let jump = 1; jump <= maxJump; jump++) {
+      if (i + jump < n) {
+        minJumps = Math.min(minJumps, 1 + dfs(i + jump))
+      }
     }
-    
-    return dfs(0);
-};
+
+    memo[i] = minJumps
+    return minJumps
+  }
+
+  return dfs(0)
+}
 
 // Bottom-Up - O(n^2) worst
-var jump = function(nums) {
-    const n = nums.length;
-    const dp = new Array(n).fill(Infinity);
-    dp[n - 1] = 0; // 0 jumps needed at last position
-    
-    // Work backwards
-    for (let i = n - 2; i >= 0; i--) {
-        const maxJump = nums[i];
-        
-        // Check all positions reachable from i
-        for (let jump = 1; jump <= maxJump && i + jump < n; jump++) {
-            dp[i] = Math.min(dp[i], 1 + dp[i + jump]);
-        }
+var jump = function (nums) {
+  const n = nums.length
+  const dp = new Array(n).fill(Infinity)
+  dp[n - 1] = 0 // 0 jumps needed at last position
+
+  // Work backwards
+  for (let i = n - 2; i >= 0; i--) {
+    const maxJump = nums[i]
+
+    // Check all positions reachable from i
+    for (let jump = 1; jump <= maxJump && i + jump < n; jump++) {
+      dp[i] = Math.min(dp[i], 1 + dp[i + jump])
     }
-    
-    return dp[0];
-};
+  }
+
+  return dp[0]
+}
 
 // COMMON MISTAKES:
 // - Not identifying overlapping subproblems
@@ -108,8 +108,6 @@ var jump = function(nums) {
 // - House Robber Problem
 // - Climbing Stairs
 // - Maximum Subarray Problem
-
-
 
 // Another Example: Best Time to Buy and Sell Stock with Cooldown
 // Given an array prices where prices[i] is the price of a given stock on the ith day,
@@ -158,7 +156,6 @@ var maxProfit = function (prices) {
   }
 }
 
-
 // Another Example: Edit Distance
 // Given two strings word1 and word2, return the minimum number of operations required to convert word1 to word2.
 // You have the following three operations permitted on a word:
@@ -193,7 +190,7 @@ var minDistance = function (word1, word2) {
           Math.min(
             dp[i - 1][j], // delete
             dp[i][j - 1], // insert
-            dp[i - 1][j - 1] // replace
+            dp[i - 1][j - 1], // replace
           )
       }
     }
@@ -201,9 +198,6 @@ var minDistance = function (word1, word2) {
 
   return dp[m][n]
 }
-
-
-
 
 // Another Example: Longest Common Subsequence
 // Given two strings text1 and text2, return the length of their longest common subsequence.
@@ -219,28 +213,26 @@ var minDistance = function (word1, word2) {
 
 // If characters match, we extend the subsequence; if not, we take the maximum by excluding one character.
 
-var longestCommonSubsequence = function(text1, text2) {
-    // Create DP table: dp[i][j] = LCS length for text1[i:] and text2[j:]
-    let dp = Array.from({length: text1.length+1}, () => new Array(text2.length+1).fill(0))
+var longestCommonSubsequence = function (text1, text2) {
+  // Create DP table: dp[i][j] = LCS length for text1[i:] and text2[j:]
+  let dp = Array.from({ length: text1.length + 1 }, () => new Array(text2.length + 1).fill(0))
 
-    // Build table backwards from the end of both strings
-    for(let i = text1.length-1; i >= 0; i--) {
-        for(let j = text2.length-1; j >= 0; j--) {
-            // If characters match, extend the subsequence
-            if(text1[i] === text2[j]) {
-                dp[i][j] = 1 + dp[i+1][j+1]
-            } else {
-                // If no match, take max of excluding either character
-                dp[i][j] = Math.max(dp[i+1][j], dp[i][j+1])
-            }
-        }
+  // Build table backwards from the end of both strings
+  for (let i = text1.length - 1; i >= 0; i--) {
+    for (let j = text2.length - 1; j >= 0; j--) {
+      // If characters match, extend the subsequence
+      if (text1[i] === text2[j]) {
+        dp[i][j] = 1 + dp[i + 1][j + 1]
+      } else {
+        // If no match, take max of excluding either character
+        dp[i][j] = Math.max(dp[i + 1][j], dp[i][j + 1])
+      }
     }
+  }
 
-    // Result is LCS length starting from index 0 of both strings
-    return dp[0][0]
-};
-
-
+  // Result is LCS length starting from index 0 of both strings
+  return dp[0][0]
+}
 
 // Another Example: Best Time to Buy and Sell Stock III
 // You are given an array prices where prices[i] is the price of a given stock on the ith day.
@@ -253,48 +245,41 @@ var longestCommonSubsequence = function(text1, text2) {
 // and the number of transactions left. Based on these states, we can decide to buy, sell, or skip.
 
 var maxProfit = function (prices) {
-    const n = prices.length
+  const n = prices.length
 
-    // memo[day][holding][transactionsLeft]
-    const memo = Array.from({ length: n }, () =>
-        Array.from({ length: 2 }, () =>
-            new Array(3).fill(-1)
-        )
-    )
+  // memo[day][holding][transactionsLeft]
+  const memo = Array.from({ length: n }, () => Array.from({ length: 2 }, () => new Array(3).fill(-1)))
 
-    function dfs(day, holding, transactionsLeft) {
-        // base cases
-        if (day === n || transactionsLeft === 0) return 0
+  function dfs(day, holding, transactionsLeft) {
+    // base cases
+    if (day === n || transactionsLeft === 0) return 0
 
-        if (memo[day][holding][transactionsLeft] !== -1) {
-            return memo[day][holding][transactionsLeft]
-        }
-
-        let profit
-
-        if (holding === 0) {
-            // can buy
-            profit = Math.max(
-                -prices[day] + dfs(day + 1, 1, transactionsLeft), // buy
-                dfs(day + 1, 0, transactionsLeft)                 // skip
-            )
-        } else {
-            // can sell
-            profit = Math.max(
-                prices[day] + dfs(day + 1, 0, transactionsLeft - 1), // sell
-                dfs(day + 1, 1, transactionsLeft)                    // hold
-            )
-        }
-
-        memo[day][holding][transactionsLeft] = profit
-        return profit
+    if (memo[day][holding][transactionsLeft] !== -1) {
+      return memo[day][holding][transactionsLeft]
     }
 
-    return dfs(0, 0, 2)
+    let profit
+
+    if (holding === 0) {
+      // can buy
+      profit = Math.max(
+        -prices[day] + dfs(day + 1, 1, transactionsLeft), // buy
+        dfs(day + 1, 0, transactionsLeft), // skip
+      )
+    } else {
+      // can sell
+      profit = Math.max(
+        prices[day] + dfs(day + 1, 0, transactionsLeft - 1), // sell
+        dfs(day + 1, 1, transactionsLeft), // hold
+      )
+    }
+
+    memo[day][holding][transactionsLeft] = profit
+    return profit
+  }
+
+  return dfs(0, 0, 2)
 }
-
-
-
 
 // Another Example: Word Break
 // Given a string s and a dictionary of strings wordDict, return true if s can be segmented
@@ -307,24 +292,20 @@ var maxProfit = function (prices) {
 // into words from the dictionary. For each position i, we check all previous positions j
 // to see if s[j:i] is in the dictionary and if dp[j] is true.
 
+var wordBreak = function (s, wordDict) {
+  let dp = new Array(s.length + 1).fill(false)
+  dp[0] = true
+  let set = new Set(wordDict)
 
-var wordBreak = function(s, wordDict) {
-    let dp = new Array(s.length+1).fill(false)
-    dp[0] = true
-    let set = new Set(wordDict)
-
-    for(let i = 0; i < s.length; i++) {
-        for(let j = i; j < s.length; j++) {
-            if(dp[i] && set.has(s.slice(i, j+1))) {
-                dp[j+1] = true
-            }
-        }
+  for (let i = 0; i < s.length; i++) {
+    for (let j = i; j < s.length; j++) {
+      if (dp[i] && set.has(s.slice(i, j + 1))) {
+        dp[j + 1] = true
+      }
     }
-    return dp[s.length]
-};
-
-
-
+  }
+  return dp[s.length]
+}
 
 // Another Example: Palindrome Partitioning II
 // Given a string s, partition s such that every substring of the partition is a palindrome.
@@ -338,21 +319,20 @@ var wordBreak = function(s, wordDict) {
 // - For each position i, we check all previous positions j to see if s[j:i] is a palindrome.
 // - If it is, we update dp[i] with the minimum cuts needed.
 
+var minCut = function (s) {
+  // Base cases: empty or single character string needs 0 cuts
+  if (s.length === 0 || s.length === 1) return 0
 
-var minCut = function(s) {
-    // Base cases: empty or single character string needs 0 cuts
-    if (s.length === 0 || s.length === 1) return 0
+  const n = s.length
 
-    const n = s.length
+  // dp[i] = minimum number of palindrome partitions for substring s[i..n-1]
+  // (cuts = partitions - 1)
+  const dp = new Array(n).fill(-1)
 
-    // dp[i] = minimum number of palindrome partitions for substring s[i..n-1]
-    // (cuts = partitions - 1)
-    const dp = new Array(n).fill(-1)
+  // pal[i][j] = true if substring s[i..j] is a palindrome
+  const pal = Array.from({ length: n }, () => Array(n).fill(false))
 
-    // pal[i][j] = true if substring s[i..j] is a palindrome
-    const pal = Array.from({ length: n }, () => Array(n).fill(false))
-
-    /*
+  /*
         Build palindrome DP table
 
         We treat:
@@ -362,46 +342,107 @@ var minCut = function(s) {
         Loop order ensures pal[j+1][i-1] is already computed
         when needed.
     */
-    for (let i = 0; i < n; i++) {          // end index
-        for (let j = 0; j <= i; j++) {     // start index
-            /*
+  for (let i = 0; i < n; i++) {
+    // end index
+    for (let j = 0; j <= i; j++) {
+      // start index
+      /*
                 s[j..i] is a palindrome if:
                 1) s[j] === s[i]
                 2) inner substring is palindrome OR length <= 2
             */
-            if (s[i] === s[j] && (i - j <= 2 || pal[j + 1][i - 1])) {
-                pal[j][i] = true
-            }
-        }
+      if (s[i] === s[j] && (i - j <= 2 || pal[j + 1][i - 1])) {
+        pal[j][i] = true
+      }
     }
+  }
 
-    // We count partitions, so final answer = partitions - 1
-    return getMinCuts(0) - 1
+  // We count partitions, so final answer = partitions - 1
+  return getMinCuts(0) - 1
 
-    /*
+  /*
         Recursive DP:
         getMinCuts(i) = minimum number of palindrome partitions
                         for substring s[i..n-1]
     */
-    function getMinCuts(i) {
-        // Reached end of string → no partitions needed
-        if (i === n) return 0
+  function getMinCuts(i) {
+    // Reached end of string → no partitions needed
+    if (i === n) return 0
 
-        // Return memoized result
-        if (dp[i] !== -1) return dp[i]
+    // Return memoized result
+    if (dp[i] !== -1) return dp[i]
 
-        let minCuts = Infinity
+    let minCuts = Infinity
 
-        // Try all palindromic prefixes starting at index i
-        for (let j = i; j < n; j++) {
-            if (pal[i][j]) {
-                // 1 partition for s[i..j] + partitions for remaining substring
-                let cuts = 1 + getMinCuts(j + 1)
-                minCuts = Math.min(minCuts, cuts)
-            }
-        }
-
-        dp[i] = minCuts
-        return minCuts
+    // Try all palindromic prefixes starting at index i
+    for (let j = i; j < n; j++) {
+      if (pal[i][j]) {
+        // 1 partition for s[i..j] + partitions for remaining substring
+        let cuts = 1 + getMinCuts(j + 1)
+        minCuts = Math.min(minCuts, cuts)
+      }
     }
+
+    dp[i] = minCuts
+    return minCuts
+  }
+}
+
+
+// Rerooting DP Example: Minimum Edge Reversals to Make All Paths Lead to the City Zero
+// Given a tree with n nodes (0 to n-1) and edges, find the minimum number of edge reversals needed
+// so that all paths lead to node 0.
+
+// Intuition:
+// We can use a rerooting DP approach:
+// 1. Perform a DFS from node 0 to calculate the number of edge reversals needed when node 0 is the root.
+// 2. Reroot the tree at each node and propagate the answers using the relationship between parent and child nodes.
+// When moving the root from parent to child, we adjust the reversal count based on whether the edge is forward or backward.
+
+var minEdgeReversals = function (n, edges) {
+  /**
+   * Rerooting DP Pattern
+   * 1. DFS from root (node 0) to calculate base answer
+   * 2. Reroot DFS to propagate answers to all nodes
+   *
+   * Key: When moving root parent→child:
+   *   Forward edge (cost=0) → becomes backward (+1)
+   *   Backward edge (cost=1) → becomes forward (-1)
+   */
+
+  // Build graph: [neighbor, cost]
+  // cost=0: original direction, cost=1: reversed direction
+  const graph = Array.from({ length: n }, () => [])
+
+  for (const [u, v] of edges) {
+    graph[u].push([v, 0]) // u→v forward
+    graph[v].push([u, 1]) // v→u backward
+  }
+
+  const dp = new Array(n).fill(0)
+
+  // DFS1: Calculate reversals when node 0 is root
+  function calculateRoot(node, parent) {
+    let reversals = 0
+    for (const [nei, cost] of graph[node]) {
+      if (nei === parent) continue
+      reversals += cost + calculateRoot(nei, node)
+    }
+    return reversals
+  }
+
+  // DFS2: Reroot to compute for all nodes
+  function reroot(node, parent) {
+    for (const [nei, cost] of graph[node]) {
+      if (nei === parent) continue
+
+      // Adjust for edge direction flip
+      dp[nei] = dp[node] + (cost === 0 ? 1 : -1)
+      reroot(nei, node)
+    }
+  }
+
+  dp[0] = calculateRoot(0, -1)
+  reroot(0, -1)
+  return dp
 }

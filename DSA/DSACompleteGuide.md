@@ -32,7 +32,7 @@ Exactly K trick:
 ```javascript
 // Problem: Count subarrays with EXACTLY k distinct elements
 // Trick: exactly(k) = atMost(k) - atMost(k-1)
-
+// Note: This approach only works if all nums[i] >= 0 (non-negative integers).
 function exactlyK(nums, k) {
   return atMostK(nums, k) - atMostK(nums, k - 1);
 }
@@ -152,6 +152,67 @@ for (let len = 2; len <= n; len++) {
 - Longest Palindromic Subsequence
 - Wildcard/Regex Matching
 
+**E.5. [Longest Increasing Subsequence (LIS)](algorithms/array/LIS.js)** ⭐
+
+**Approaches:**
+1. **DP:** O(n²) time, O(n) space
+2. **DP + Binary Search:** O(n log n) time, O(n) space ⭐
+
+**Optimized Binary Search Solution:**
+```javascript
+var lengthOfLIS = function(nums) {
+    // tails[i] = smallest possible tail for increasing subsequence of length i+1
+    // e.g. tails = [2, 5, 7] means:
+    //   length-1 subsequence ends with 2
+    //   length-2 subsequence ends with 5
+    //   length-3 subsequence ends with 7
+    let tails = []
+
+    for(let num of nums) {
+        // binary search: find first tail >= num
+        // i.e. find where num "fits" in tails
+        let lo = 0, hi = tails.length
+        while(lo < hi) {
+            let mid = Math.floor((lo + hi) / 2)
+            if(tails[mid] < num) lo = mid + 1
+            else hi = mid
+        }
+
+        // lo === tails.length → num is larger than all tails → extends LIS
+        // lo < tails.length  → replace tails[lo] with num (smaller tail = better for future)
+        tails[lo] = num
+    }
+
+    // length of tails = length of LIS
+    return tails.length
+};
+```
+
+**Key Insight:** 
+- `tails` array maintains smallest ending value for each subsequence length
+- Binary search finds where current element fits
+- If element is largest seen, it extends LIS (append)
+- Otherwise, replace a larger tail to keep better options for future elements
+
+**DP Approach (for reference):**
+```javascript
+// O(n²) solution
+const dp = new Array(nums.length).fill(1);
+for (let i = 1; i < nums.length; i++) {
+  for (let j = 0; j < i; j++) {
+    if (nums[j] < nums[i]) {
+      dp[i] = Math.max(dp[i], dp[j] + 1);
+    }
+  }
+}
+return Math.max(...dp);
+```
+
+**Variations:**
+- Longest Decreasing Subsequence (reverse logic)
+- Number of LIS (count DP)
+- Print actual LIS (backtrack with parent pointers)
+
 **F. DP on Trees**
 - Maximum path sum
 - Diameter of tree
@@ -182,12 +243,67 @@ for (let mask = 1; mask < (1 << n); mask++) {
 }
 ```
 
-**Key:** Time O(2^n * n), Space O(2^n * n). Use when n ≤ 20-25
 
-**Space Optimization Tricks:**
-- 2D → 1D: Only keep previous row
-- Rolling array: Use modulo for index
-- Two variables: For fibonacci-like recurrences
+
+**Rerooting DP (Tree DP Advanced)**
+- Efficiently computes DP values for all possible roots (e.g., subtree sums, distances).
+- Two DFS passes:
+  1. Bottom-up: Compute DP for each subtree.
+  2. Top-down: Reroot and update answers for all nodes.
+
+```javascript
+// Example: Minimum Edge Reversals to Make All Paths Lead to Node 0
+var minEdgeReversals = function(n, edges) {
+    /**
+     * Rerooting DP Pattern
+     * 1. DFS from root (node 0) to calculate base answer
+     * 2. Reroot DFS to propagate answers to all nodes
+     * 
+     * Key: When moving root parent→child:
+     *   Forward edge (cost=0) → becomes backward (+1)
+     *   Backward edge (cost=1) → becomes forward (-1)
+     */
+    
+    // Build graph: [neighbor, cost]
+    // cost=0: original direction, cost=1: reversed direction
+    const graph = Array.from({ length: n }, () => [])
+    
+    for(const [u, v] of edges) {
+        graph[u].push([v, 0])  // u→v forward
+        graph[v].push([u, 1])  // v→u backward
+    }
+    
+    const dp = new Array(n).fill(0)
+    
+    // DFS1: Calculate reversals when node 0 is root
+    function calculateRoot(node, parent) {
+        let reversals = 0
+        for(const [nei, cost] of graph[node]) {
+            if(nei === parent) continue
+            reversals += cost + calculateRoot(nei, node)
+        }
+        return reversals
+    }
+    
+    // DFS2: Reroot to compute for all nodes
+    function reroot(node, parent) {
+        for(const [nei, cost] of graph[node]) {
+            if(nei === parent) continue
+            
+            // Adjust for edge direction flip
+            dp[nei] = dp[node] + (cost === 0 ? 1 : -1)
+            reroot(nei, node)
+        }
+    }
+    
+    dp[0] = calculateRoot(0, -1)
+    reroot(0, -1)
+    return dp
+}
+```
+- **Applications:** Subtree queries, sum of distances, etc.  **Time:** O(n)
+
+
 
 **Common Mistakes:**
 - Wrong iteration order (compute dependencies first!)
