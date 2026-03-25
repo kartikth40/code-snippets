@@ -8,10 +8,11 @@
 ## 📚 What's Inside?
 
 ### 1️⃣ [DSA Mastery](DSA/)
-- **16+ Core Patterns** with complexity analysis
-- **Quick Lookup Tables** for instant pattern recognition
-- **40+ Coded Solutions** across arrays, graphs, strings, DP, and more
-- **Advanced Algorithms:** Segment Tree, Bitmask DP, Manacher's, Monotonic Deque
+- **19 Core Patterns** with complexity analysis and skeleton templates
+- **Quick Lookup Tables** for instant pattern recognition (keyword → pattern)
+- **50+ Coded Solutions** across arrays, graphs, strings, DP, trees, and more
+- **10 Data Structures** — MinHeap, MaxHeap, PriorityQueue, BST, Trie, Segment Tree, Graph, LinkedList, Stack/MinStack, LRU Cache
+- **Advanced Algorithms:** Segment Tree, Bitmask DP, Manacher's, Monotonic Deque, Rerooting DP
 
 **Quick Links:**
 - 📖 [DSA Complete Guide](DSA/DSACompleteGuide.md) - Deep dive with code templates
@@ -24,9 +25,10 @@
 - **Interview-Ready Format** - Perfect for FAANG/Unicorn/Startup interviews
 - **India-Specific Designs** (Payment Gateway with UPI/Razorpay, Food Delivery like Swiggy/Zomato)
 - **Component Deep-Dives** (Load Balancers, Caching, DB Sharding, Message Queues, Microservices, Monitoring)
+- **Low-Level Design (LLD)** - SOLID principles, design patterns, class diagrams, common LLD problems
+- **API Design Patterns** - REST vs GraphQL vs gRPC with trade-offs and code examples
+- **Distributed Systems Concepts** - CAP theorem, consensus, replication, sagas, circuit breakers
 - **Trade-off Analysis** for scalability decisions
-- **Capacity Estimation** frameworks
-- **Low-Level Design sections** (Class diagrams, Sequence diagrams, State machines, Design patterns)
 
 **All Designs SDE-2 Optimized:**
 Payment Gateway, Uber, WhatsApp, Food Delivery, YouTube, Twitter, Instagram, URL Shortener, Distributed Cache, Netflix
@@ -35,6 +37,9 @@ Payment Gateway, Uber, WhatsApp, Food Delivery, YouTube, Twitter, Instagram, URL
 - 📖 [System Design Guide](SystemDesign/SystemDesignGuide.md) - Complete framework
 - 🏗️ [Design Examples](SystemDesign/designs/) - **SDE-2 optimized** designs
 - 🔧 [Components](SystemDesign/components/) - Building blocks explained in depth
+- 🧱 [Low-Level Design](SystemDesign/LowLevelDesign.md) - SOLID, design patterns, LLD problems
+- 🔌 [API Design Patterns](SystemDesign/APIDesignPatterns.md) - REST, GraphQL, gRPC
+- ⚙️ [Distributed Systems](SystemDesign/DistributedSystemsConcepts.md) - CAP, consensus, resilience
 
 ---
 
@@ -42,15 +47,21 @@ Payment Gateway, Uber, WhatsApp, Food Delivery, YouTube, Twitter, Instagram, URL
 - **STAR Method Framework** for structured answers
 - **20+ Story Templates** covering all scenarios
 - **7 Company Guides** (Google, Meta, Amazon, Microsoft, Apple, India, Indian Startups)
+- **Amazon's 16 Leadership Principles** - all updated with stories and examples
 - **India-Specific Behavioral Prep** covering FAANG India offices and unicorn startups
 - **Mock Practice Framework** with peer and self-practice protocols
-- **Interview Question Bank** with sample answers
+- **Salary Negotiation Guide** - scripts, India benchmarks, RSU/ESOP evaluation
+- **Questions to Ask Interviewers** - 50+ questions by category and company
+- **Offer Evaluation Framework** - 5-dimension scoring, red flags, comparison template
 
 **Quick Links:**
 - 📖 [Behavioral Guide](Behavioral/BehavioralGuide.md) - STAR method & frameworks
 - ⭐ [STAR Stories](Behavioral/STAR-stories.md) - Your personal story bank
 - 🏢 [Company-Specific](Behavioral/company-specific/) - Culture fit guides (Google, Meta, Amazon, Microsoft, Apple, India, Indian Startups)
 - 🎯 [Mock Practice Framework](Behavioral/MockPracticeFramework.md) - Structured practice guide
+- 💰 [Salary Negotiation](Behavioral/SalaryNegotiation.md) - Scripts, benchmarks, ESOP evaluation
+- ❓ [Questions to Ask](Behavioral/QuestionsToAsk.md) - 50+ interview questions by category
+- 📋 [Offer Evaluation](Behavioral/OfferEvaluation.md) - Framework for comparing offers
 
 ---
 
@@ -138,9 +149,9 @@ cat InterviewPrep/StudyPlan-8weeks.md
 
 | Category | Topics Covered | Difficulty | Completion |
 |----------|---------------|------------|------------|
-| **DSA** | 16+ patterns, 40+ algorithms | ⭐⭐⭐⭐⭐ | 🚧 In Progress |
-| **System Design** | 10 designs (inc. India-specific), 6 components | ⭐⭐⭐⭐⭐ | 🚧 In Progress |
-| **Behavioral** | STAR framework, 7 company guides, mock practice | ⭐⭐⭐⭐ | 🚧 In Progress |
+| **DSA** | 19 patterns, 50+ algorithms, 10 data structures | ⭐⭐⭐⭐⭐ | 🚧 In Progress |
+| **System Design** | 10 designs, 6 components, LLD, API patterns, distributed systems | ⭐⭐⭐⭐⭐ | 🚧 In Progress |
+| **Behavioral** | STAR, 7 company guides, 16 Amazon LPs, salary negotiation, offer eval | ⭐⭐⭐⭐ | 🚧 In Progress |
 | **Interview Prep** | 8-week plan, India guide, company tips | ⭐⭐⭐ | 🚧 In Progress |
 | **India Resources** | Salaries, companies, cities, referrals, designs | ⭐⭐⭐⭐ | 🚧 In Progress |
 
@@ -151,14 +162,28 @@ cat InterviewPrep/StudyPlan-8weeks.md
 ```
 tech-interview-master/
 ├── 📘 DSA/
-│   ├── DSACompleteGuide.md          # Comprehensive pattern guide
-│   ├── DSAQuickLookup.md            # Quick reference cheatsheet
-│   ├── patterns/                    # DSA pattern implementations
-│   ├── algorithms/                  # Core algorithms (BFS, DFS, etc.)
-│   └── data-structures/             # DS implementations (Heap, Trie, etc.)
+│   ├── DSACompleteGuide.md          # Comprehensive pattern guide with TOC
+│   ├── DSAQuickLookup.md            # Quick reference cheatsheet (20 categories)
+│   ├── patterns/                    # 19 pattern files (two-pointers, backtracking, greedy, intervals, matrix, etc.)
+│   ├── algorithms/                  # Core algorithms
+│   │   ├── array/                   # Binary search, Kadane's, LIS, kSum
+│   │   ├── graph/                   # 14 graph algorithms (Dijkstra, MST, SCC, etc.)
+│   │   ├── sorting/                 # QuickSort, MergeSort, QuickSelect
+│   │   ├── string/                  # KMP, Rabin-Karp
+│   │   └── dp/                      # 7 DP implementations (knapsack, LCS, edit distance, etc.)
+│   └── data-structures/             # DS implementations
+│       ├── heap/                    # MinHeap, MaxHeap, PriorityQueue
+│       ├── stack/                   # Stack, MinStack
+│       ├── linked-list/             # LinkedList (reverse, cycle, merge, palindrome)
+│       ├── tree/                    # BST, Trie, Segment Tree
+│       ├── graph/                   # Graph (adjacency list, matrix, builders)
+│       └── design/                  # LRU Cache
 │
 ├── 🏗️ SystemDesign/
 │   ├── SystemDesignGuide.md         # Framework & methodology
+│   ├── LowLevelDesign.md            # SOLID, design patterns, LLD problems
+│   ├── APIDesignPatterns.md         # REST vs GraphQL vs gRPC
+│   ├── DistributedSystemsConcepts.md # CAP, consensus, replication, resilience
 │   ├── designs/                     # Real system designs
 │   │   ├── url-shortener.md         # Complete design with capacity calc
 │   │   ├── twitter.md               # Social media feed design
@@ -181,8 +206,11 @@ tech-interview-master/
 ├── 💼 Behavioral/
 │   ├── BehavioralGuide.md           # STAR method framework
 │   ├── STAR-stories.md              # Template for 15-20 stories
-│   ├── leadership-principles.md     # Amazon's 14 principles
+│   ├── leadership-principles.md     # Amazon's 16 Leadership Principles
 │   ├── MockPracticeFramework.md     # Self & peer practice protocols
+│   ├── SalaryNegotiation.md         # Scripts, benchmarks, ESOP evaluation
+│   ├── QuestionsToAsk.md            # 50+ questions by category & company
+│   ├── OfferEvaluation.md           # 5-dimension offer comparison framework
 │   └── company-specific/            # Company culture guides
 │       ├── google.md                # Googleyness & growth mindset
 │       ├── meta.md                  # Move fast, impact-driven culture
@@ -211,6 +239,8 @@ tech-interview-master/
 ✅ **Complexity Analysis** - Time/Space for every pattern and algorithm  
 ✅ **Progressive Learning** - From fundamentals to advanced topics  
 ✅ **Interview-Focused** - Real questions and scenarios from top companies  
+✅ **LLD & Design Patterns** - SOLID principles, patterns, class diagrams  
+✅ **Salary & Offer Guidance** - Negotiation scripts, ESOP evaluation, offer comparison
 
 ---
 
@@ -284,6 +314,6 @@ This repository contains everything you need to succeed, but remember:
 
 ---
 
-**Last Updated:** February 2026  
+**Last Updated:** March 2026  
 **Status:** 🚧 In Progress  
 **Target:** SDE-1/2 at top tech companies (Global & India)

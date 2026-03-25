@@ -1,5 +1,31 @@
 # Complete DSA Pattern Guide
 
+## 📑 Table of Contents
+
+1. [Array](#1-array) — Two Pointers, Sliding Window, Prefix/Suffix, Kadane's, Exactly K Trick
+2. [Dynamic Programming](#2-dynamic-programming) — 1D, 2D, Knapsack, Partition, String DP, LIS, Bitmask DP, Rerooting DP
+3. [Hash Table](#3-hash-table) — O(1) Lookup, Frequency, Complement Search
+4. [Segment Tree](#35-segment-tree-advanced-data-structure-) — Range Queries with Updates
+5. [DFS](#4-dfs---depth-first-search) — Recursive, Iterative, Tree Traversals, Matrix, Cycle Detection, Topological Sort
+6. [BFS](#5-bfs---breadth-first-search) — Level Order, Shortest Path, Multi-Source BFS
+7. [Graph](#6-graph) — Dijkstra, Bellman-Ford, Floyd-Warshall, Topological Sort, Union-Find, MST, SCC
+8. [String](#7-string) — KMP, Rabin-Karp, Suffix Trie, Manacher's
+9. [Tree](#8-tree) — DFS Traversals, BFS Level Order
+10. [Binary Search](#9-binary-search) — Standard, On Answer, Rotated Array
+11. [Sorting](#10-sorting) — QuickSort, MergeSort, QuickSelect
+12. [Stack](#11-stack) — Monotonic Stack, Monotonic Deque
+13. [Greedy](#12-greedy) — Intervals, Jump Game
+14. [Linked List](#13-linked-list) — Reverse, Cycle Detection, Merge
+15. [Backtracking](#14-backtracking) — Permutations, Combinations, N-Queens
+16. [Math](#15-math) — GCD, Fast Exponentiation
+17. [Heap / Priority Queue](#16-heap--priority-queue) — Top K, Running Median
+18. [Design](#17-design) — LRU Cache, Trie
+19. [Bit Manipulation](#18-bit-manipulation) — XOR Tricks, Subset Generation
+
+📁 See also: [DSAQuickLookup.md](DSAQuickLookup.md) for keyword → pattern mapping
+
+---
+
 ## 🎯 CORE PATTERNS
 
 ### 1. Array

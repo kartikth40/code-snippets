@@ -1,14 +1,14 @@
-# Amazon's 14 Leadership Principles
+# Amazon's 16 Leadership Principles
 
 ## 🎯 Overview
 
-Amazon's **14 Leadership Principles** are not just values—they are **used to evaluate every candidate** in behavioral interviews. Every question maps to 1-2 principles.
+Amazon's **16 Leadership Principles** are not just values—they are **used to evaluate every candidate** in behavioral interviews. Every question maps to 1-2 principles.
 
-**Critical:** Prepare 2-3 STAR stories for EACH principle (28-42 stories total for Amazon).
+**Critical:** Prepare 2-3 STAR stories for EACH principle (32-48 stories total for Amazon).
 
 ---
 
-## 📋 The 14 Principles
+## 📋 The 16 Principles
 
 ### 1. **Customer Obsession**
 
@@ -288,6 +288,40 @@ Leaders focus on the key inputs for their business and deliver them with the rig
 **Example Story Hook:**
 *"Despite losing 2 team members mid-sprint and a vendor API breaking, I re-scoped the project, worked weekends, and delivered the critical path features on time..."*
 
+### 15. **Strive to be Earth's Best Employer** 🌍
+**Definition:** Leaders work every day to create a safer, more productive, higher performing, more diverse, and more just work environment.
+
+**Interview Questions:**
+- "Tell me about a time you improved team culture or morale"
+- "Describe how you create an inclusive environment"
+- "Tell me about a time you advocated for a teammate"
+
+**What They're Looking For:**
+- Creating psychological safety
+- Advocating for team wellbeing
+- Inclusive leadership
+
+**Example Story Hook:**
+*"After 3 months of crunch, team morale was low. I organized a retrospective, identified root causes, and proposed 'No Meeting Fridays' and a recognition program. Satisfaction scores went from 60% to 85%..."*
+
+---
+
+### 16. **Success and Scale Bring Broad Responsibility** 🌎
+**Definition:** Amazon is a large company and our actions have a big impact. We must be humble and thoughtful about the effects of our decisions on employees, customers, communities, and the planet.
+
+**Interview Questions:**
+- "Tell me about a time you considered the broader impact of your work"
+- "Describe a decision where you weighed societal or environmental impact"
+- "How do you think about sustainability in engineering?"
+
+**What They're Looking For:**
+- Awareness of second-order effects
+- Thinking beyond immediate business metrics
+- Responsibility at scale
+
+**Example Story Hook:**
+*"When building a feature that would increase server load by 50%, I optimized the code to reduce CPU usage by 50% instead, cutting both costs and carbon footprint by 10%..."*
+
 ---
 
 ## 📊 Quick Reference Matrix
@@ -308,6 +342,8 @@ Leaders focus on the key inputs for their business and deliver them with the rig
 | Dive Deep | Details matter | Found metrics were wrong |
 | Have Backbone | Respectful disagreement | Challenged manager with data |
 | Deliver Results | Overcome obstacles | Delivered despite team leaving |
+| Earth's Best Employer | Team culture & inclusion | Improved morale, reduced turnover |
+| Broad Responsibility | Impact beyond business | Reduced carbon footprint via optimization |
 
 ---
 
@@ -337,7 +373,7 @@ Ensure you have stories covering:
 - [ ] 2x Ownership
 - [ ] 2x Invent and Simplify
 - [ ] 2x Deliver Results
-- [ ] 1x each for remaining 10 principles
+- [ ] 1x each for remaining 12 principles
 - [ ] **Total: 20+ stories**
 
 ---

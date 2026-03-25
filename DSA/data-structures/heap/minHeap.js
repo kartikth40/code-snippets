@@ -41,6 +41,14 @@ class MinHeap {
     return top
   }
 
+  peek() {
+    return this.h.length > 0 ? this.h[0] : null
+  }
+
+  size() {
+    return this.h.length
+  }
+
   #up(i) {
     const h = this.h
     while (i > 0) {

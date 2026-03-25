@@ -169,7 +169,7 @@ Each top tech company has unique interview styles, focus areas, and cultures. Th
 - **Hard:** 20%
 
 ### What Makes Amazon Unique
-- ✅ **Leadership Principles** - Every question maps to 1-2 of 14 principles
+- ✅ **Leadership Principles** - Every question maps to 1-2 of 16 principles
 - ✅ **STAR format mandatory** - Situation, Task, Action, Result
 - ✅ **Bar Raiser** - One interviewer deliberately tough
 - ✅ **OOP questions** - Design a parking lot, library system
@@ -197,7 +197,7 @@ Each top tech company has unique interview styles, focus areas, and cultures. Th
 - Design Amazon Prime Video
 
 ### Behavioral (Leadership Principles)
-**Must prepare 2-3 stories for EACH of 14 principles** (see [leadership-principles.md](leadership-principles.md))
+**Must prepare 2-3 stories for EACH of 16 principles** (see [leadership-principles.md](leadership-principles.md))
 
 **Top 5 Principles Tested:**
 1. Customer Obsession
@@ -221,7 +221,7 @@ Each top tech company has unique interview styles, focus areas, and cultures. Th
 - 🎯 **Bar Raiser strategy** - Stay calm, they're testing resilience
 
 ### Resources
-- Amazon's 14 Leadership Principles (mandatory reading)
+- Amazon's 16 Leadership Principles (mandatory reading)
 - LeetCode Amazon tagged problems (300+)
 - Practice STAR method extensively
 

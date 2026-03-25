@@ -68,6 +68,22 @@
 | Constraint based DP (TSP, state) | Bitmask DP | O(2^n * n) | O(2^n * n) | State compression: dp[mask][i] |
 | Longest palindrome substring | Manacher's Algorithm | O(n) | O(n) | Expand around centers efficiently |
 | Sliding window min/max | Monotonic Deque | O(n) | O(n) | Maintain deque of useful elements |
+| Merge overlapping intervals | Sorting + Sweep | O(n log n) | O(n) | Sort by start, merge adjacent |
+| Meeting rooms / resources | Sweep Line | O(n log n) | O(n) | Separate starts/ends, count active |
+| All permutations | Backtracking | O(n!) | O(n) | Swap elements, backtrack |
+| All subsets/combinations | Backtracking | O(2^n) | O(n) | Include/exclude each element |
+| N-Queens / Sudoku | Backtracking | O(N!) | O(n) | Place + validate + backtrack |
+| Reverse linked list | Pointer Manipulation | O(n) | O(1) | prev/curr/next pointers |
+| Cycle in linked list | Fast/Slow Pointer | O(n) | O(1) | Floyd's tortoise & hare |
+| Middle of linked list | Fast/Slow Pointer | O(n) | O(1) | Fast moves 2x, slow moves 1x |
+| Merge sorted lists | Two Pointers | O(n+m) | O(1) | Dummy head, compare and link |
+| LRU Cache | Hash Map + DLL | O(1) | O(n) | Map for lookup, DLL for order |
+| Validate BST | DFS + Range | O(n) | O(h) | Pass min/max bounds recursively |
+| Kth smallest in BST | Inorder DFS | O(h+k) | O(h) | Inorder gives sorted, stop at k |
+| Number of islands | DFS/BFS on Grid | O(m*n) | O(m*n) | Flood fill connected components |
+| Spiral matrix traversal | Boundary Shrinking | O(m*n) | O(1) | top/bottom/left/right pointers |
+| Rotate matrix 90° | Transpose + Reverse | O(n²) | O(1) | In-place: transpose then reverse rows |
+| Search in 2D sorted matrix | Staircase Search | O(m+n) | O(1) | Start top-right, eliminate row/col |
 
 ---
 
@@ -184,6 +200,8 @@
 | Interval Scheduling | O(n log n) | O(1) | Sort by end time, select non-overlapping |
 | Jump Game | O(n) | O(1) | Track max reachable distance |
 | Activity Selection | O(n log n) | O(1) | Greedy by end time |
+| Task Scheduler | O(n) | O(1) | Fill idle slots around max-freq task |
+| Gas Station | O(n) | O(1) | Track surplus, reset start on deficit |
 
 ### 14. **UNION-FIND (DISJOINT SET)**
 | Operation | Time | Use |
@@ -205,6 +223,42 @@
 |-----------|------|-------|---------|
 | Manacher's | O(n) | O(n) | Longest palindrome substring |
 | Z-Algorithm | O(n) | O(n) | Pattern matching alternative |
+
+### 17. **INTERVAL PATTERNS**
+| Problem | Time | Space | Strategy |
+|---------|------|-------|----------|
+| Merge Intervals | O(n log n) | O(n) | Sort by start, merge overlapping |
+| Insert Interval | O(n) | O(n) | Three-phase: before, merge, after |
+| Meeting Rooms II | O(n log n) | O(n) | Sweep line: separate starts/ends |
+| Interval Intersection | O(n+m) | O(n) | Two pointers, advance earlier end |
+| Min Arrows (Balloons) | O(n log n) | O(1) | Sort by end, greedy shoot |
+
+### 18. **MATRIX / GRID PATTERNS**
+| Problem | Time | Space | Strategy |
+|---------|------|-------|----------|
+| Number of Islands | O(m*n) | O(m*n) | DFS/BFS flood fill |
+| Spiral Order | O(m*n) | O(1) | Boundary shrinking (top/bottom/left/right) |
+| Rotate 90° | O(n²) | O(1) | Transpose + reverse rows |
+| Search Sorted 2D | O(m+n) | O(1) | Staircase from top-right |
+| Set Matrix Zeroes | O(m*n) | O(1) | Use first row/col as markers |
+
+### 19. **LINKED LIST PATTERNS**
+| Operation | Time | Space | Method |
+|-----------|------|-------|--------|
+| Reverse | O(n) | O(1) | prev/curr/next pointer swap |
+| Detect Cycle | O(n) | O(1) | Floyd's fast/slow |
+| Find Cycle Start | O(n) | O(1) | Meet point → reset one to head |
+| Find Middle | O(n) | O(1) | Fast moves 2x, slow 1x |
+| Merge Two Sorted | O(n+m) | O(1) | Dummy head + compare |
+| Remove Nth from End | O(n) | O(1) | Two pointers n apart |
+| Palindrome Check | O(n) | O(1) | Find mid → reverse 2nd half → compare |
+
+### 20. **DESIGN PATTERNS (DATA STRUCTURE DESIGN)**
+| Problem | Time | Space | Approach |
+|---------|------|-------|----------|
+| LRU Cache | O(1) get/put | O(n) | HashMap + Doubly Linked List |
+| Min Stack | O(1) all ops | O(n) | Auxiliary stack tracking mins |
+| MedianFinder | O(log n) add | O(n) | MaxHeap (lower) + MinHeap (upper) |
 
 ---
 
@@ -262,6 +316,31 @@ Choose Your Pattern:
 ├─ Parentheses? → Stack
 ├─ Next Greater? → Monotonic Stack
 └─ Single element? → XOR
+
+🔗 LINKED LIST
+├─ Reverse? → prev/curr/next pointers
+├─ Cycle? → Floyd's fast/slow
+├─ Middle? → Fast/slow pointer
+├─ Merge sorted? → Dummy head + two pointers
+└─ Kth from end? → Two pointers k apart
+
+📐 MATRIX / GRID
+├─ Islands/components? → DFS/BFS flood fill
+├─ Shortest path? → BFS
+├─ Spiral? → Boundary shrinking
+├─ Rotate? → Transpose + reverse
+└─ Search sorted? → Staircase (top-right)
+
+🎒 BACKTRACKING
+├─ All subsets? → Include/exclude
+├─ Permutations? → Swap + backtrack
+├─ Constraint satisfaction? → Place + validate + undo
+└─ Partition? → Try all split points
+
+📦 DESIGN
+├─ O(1) cache? → LRU Cache (Map + DLL)
+├─ Prefix search? → Trie
+└─ Running median? → Two heaps (max + min)
 ```
 
 ---
@@ -283,16 +362,19 @@ Choose Your Pattern:
 
 ## 📚 File References
 
-- **Arrays:** [sliding-window.js](patterns/sliding-window.js), [kSum-reduction.js](patterns/kSum-reduction.js)
-- **Graphs:** [DFS](algorithms/graph/dfs.js), [BFS](algorithms/graph/bfs.js), [Dijkstra's](algorithms/graph/dijkstra.js), [Floyd-Warshall](algorithms/graph/floydWarshall.js), [Kruskal's](algorithms/graph/kruskals.js), [Prim's](algorithms/graph/prims.js), [Kosaraju's](algorithms/graph/kosaraju.js), [Tarjan's](algorithms/graph/tarjan.js)
-- **Strings:** [KMP](algorithms/string/KMP.js), [Rabin-Karp](algorithms/string/Rabin-karp.js), [Suffix Trie](patterns/suffix-trie.js)  
+- **Arrays:** [Two Pointers](patterns/two-pointers.js), [Sliding Window](patterns/sliding-window.js), [Prefix Sum](patterns/prefixSumPattern.js), [kSum Reduction](patterns/kSum-reduction.js)
+- **Graphs:** [DFS](algorithms/graph/dfs.js), [BFS](algorithms/graph/bfs.js), [Dijkstra's](algorithms/graph/dijkstra.js), [Bellman-Ford](algorithms/graph/bellman-ford.js), [Floyd-Warshall](algorithms/graph/floydWarshall.js), [Kruskal's](algorithms/graph/kruskals.js), [Prim's](algorithms/graph/prims.js), [Kosaraju's](algorithms/graph/kosaraju.js), [Tarjan's](algorithms/graph/tarjan.js)
+- **Strings:** [KMP](algorithms/string/KMP.js), [Rabin-Karp](algorithms/string/Rabin-karp.js), [Suffix Trie](patterns/suffix-trie.js)
 - **Search:** [Binary Search](patterns/binarySearch.js)
 - **Sorting:** [QuickSort](algorithms/sorting/quickSort.js), [MergeSort](algorithms/sorting/mergeSort.js), [QuickSelect](algorithms/sorting/quickSelect.js)
-- **Trees:** [Trie](data-structures/graph/trie.js)
-- **Heaps:** [MinHeap](data-structures/heap/minHeap.js), [PriorityQueue](data-structures/heap/PriorityQueue.js)
-- **Stack:** [Stack](data-structures/stack/stack.js), [Monotonic Stack](patterns/monotonicStack.js)
-- **DP Patterns:** [DP Patterns](patterns/DP-patterns.js), [Bitmask DP](patterns/DP-patterns.js)
-- **Other:** [Union-Find](patterns/union-find-patterns.js), [Bit Manipulation](patterns/bit-manipulation.js), [Boyer-Moore Voting](patterns/boyer–moore-majority-voting.js)
+- **Trees:** [BST](data-structures/tree/BST.js), [Trie](data-structures/tree/trie.js), [Segment Tree](data-structures/tree/segmentTree.js)
+- **Graph DS:** [Graph](data-structures/graph/graph.js) (adjacency list, matrix, weighted builders)
+- **Heaps:** [MinHeap](data-structures/heap/minHeap.js), [MaxHeap](data-structures/heap/maxHeap.js), [PriorityQueue](data-structures/heap/PriorityQueue.js)
+- **Linked List:** [LinkedList](data-structures/linked-list/linkedList.js)
+- **Stack:** [Stack + MinStack](data-structures/stack/stack.js), [Monotonic Stack](patterns/monotonicStack.js), [Monotonic Queue](patterns/monotonicQueue.js)
+- **DP:** [DP Patterns](patterns/DP-patterns.js), [Climbing Stairs](algorithms/dp/climbingStairs.js), [House Robber](algorithms/dp/houseRobber.js), [Coin Change](algorithms/dp/coinChange.js), [Knapsack](algorithms/dp/knapsack.js), [LCS](algorithms/dp/LCS.js), [Edit Distance](algorithms/dp/editDistance.js), [Unique Paths](algorithms/dp/uniquePaths.js)
+- **Patterns:** [Backtracking](patterns/backtracking.js), [Greedy](patterns/greedy.js), [Intervals](patterns/intervals.js), [Matrix](patterns/matrix.js), [Tree Patterns](patterns/tree-patterns.js), [Heap Patterns](patterns/heap-patterns.js)
+- **Other:** [Union-Find](patterns/union-find-patterns.js), [Bit Manipulation](patterns/bit-manipulation.js), [Boyer-Moore Voting](patterns/boyer–moore-majority-voting.js), [LRU Cache](data-structures/design/LRUCache.js)
 
 ---
 

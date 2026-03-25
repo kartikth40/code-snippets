@@ -138,7 +138,7 @@ Use this structure for EVERY behavioral answer:
 
 ## 🎯 Company-Specific Frameworks
 
-### **Amazon - 14 Leadership Principles** ⭐
+### **Amazon - 16 Leadership Principles** ⭐
 Every question maps to 1-2 principles. Prepare stories for each:
 
 1. **Customer Obsession** - Work backwards from customer needs

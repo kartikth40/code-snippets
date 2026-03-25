@@ -331,6 +331,36 @@ Solutions:
 
 ---
 
+## 🔟 The "10× Load" Mental Model
+
+A powerful interview technique: at every stage of your design, ask yourself **"What breaks if traffic increases 10×?"**
+
+```
+Current: 1K QPS
+10× → 10K QPS: Add caching layer (Redis), read replicas
+10× → 100K QPS: Database sharding, CDN for static content
+10× → 1M QPS: Multi-region deployment, queue-based processing, 
+               dedicated services for hot paths
+
+For each component, think:
+├── Database: Add read replicas → shard → separate read/write DBs
+├── Cache: Local cache → Redis → Redis cluster → multi-layer cache
+├── App servers: Horizontal scaling behind load balancer
+├── Writes: Async via message queue → batch processing
+└── Reads: CDN → cache → read replicas → denormalized views
+```
+
+This shows interviewers you think about scalability proactively, not reactively. Practice this for every design you study — it builds the intuition FAANG looks for.
+
+**Key questions to ask at each scale jump:**
+- Where's the bottleneck now?
+- What's the read:write ratio? (Cache-heavy vs queue-heavy)
+- Can I make this operation async?
+- Do I need strong consistency here, or is eventual OK?
+- What's the cost trade-off of this scaling approach?
+
+---
+
 ## 📚 Next Steps
 
 1. Study [Design Examples](designs/) - Real-world system designs
